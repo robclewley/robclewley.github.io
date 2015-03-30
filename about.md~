@@ -3,6 +3,7 @@ layout: page
 title: About
 ---
 
+<pre>![Test.](/assets/test-940x689.jpg)</pre>
 
 I am a 
 I want to use this website to help teach people new skills.
@@ -12,4 +13,4 @@ Before, I was a.
 Before that,
 Before that, 
 
-
+<div>If you like my website, you can follow me on twitter [@robclewley](https://twitter.com/robclewley).</div>
