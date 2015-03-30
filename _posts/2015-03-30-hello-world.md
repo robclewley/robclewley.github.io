@@ -2,6 +2,7 @@
 layout: post
 title: "Hello World"
 comments: true
+tags: [literate modeling, reverse engineering, tdd, metamodeling, discussion]
 redirect_from: "/2015/03/30/hello-world"
 permalink: hello-world
 ---
