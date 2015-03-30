@@ -31,10 +31,12 @@ version:          1.0.0
 github:
   repo:           github.com/robclewley/robclewley.github.io
 
+
 # This is the list of pages to include in the header of the website.
 pages_list:
   About: '/about/'
   Archive: '/archive/'
+  Tagged: '/tagged/'
   Feed: '/atom.xml'
 
 # Allow URL Redirects:

@@ -1,15 +1,23 @@
 ---
 layout: page
-title: Blogs by tag
+title: Blog Posts by Tag
 ---
 
-## Blog Posts by Tag
 <div>
-    {% if site.tags[page.tag] %}
-        {% for post in site.tags[page.tag] %}
-            <a href="{{ post.url }}/">{{ post.title }}</a>
-        {% endfor %}
-    {% else %}
-        <p>There are no posts for this tag.</p>
-    {% endif %}
+{% for tag in site.data.tags %}
+   <h3>{{ tag.name }}</h3>
+   <ul>
+    {% for post in site.posts %}
+	  {% if post.tags.size > 0 %}
+		  {% for ptag in post.tags %}
+			  {% if ptag == tag.slug %}
+				  <li> <a href="{{ post.url }}"> {{ post.title }}  - <small>{{ post.date | date_to_string }}</small>
+				    </a></li>
+			  {% endif %} <!-- ptag -->
+		  {% endfor %} <!-- ptag -->
+	  {% endif %} <!-- size -->
+    {% endfor %} <!-- post -->
+	</ul>
+{% endfor %} <!-- tag -->
+
 </div>
