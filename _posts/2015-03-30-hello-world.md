@@ -41,7 +41,7 @@ predict patterns in data using *data-driven models*.
 
 At the very least, funding agencies increasingly demand curated, long-term
 archiving of research data and papers, and this is supported
-technologically by university support and various online tools.
+technologically by university IT support and various online tools.
 
 Each year, there are more labs that use version control to track,
 manage, and backup their data and code. Conference meetings include
@@ -76,8 +76,8 @@ doing math modeling as such, but to the process of actually *doing*
 math modeling itself. That process, admittedly, involves new
 software that can benefit from some of these concepts ...[^2]
 
-I will talk less about progress in fancy analytic tools to data, *per
-se*, unless it overlaps with something relevant to modeling. As you'll
+I will talk less about progress in fancy analytic tools for data, *per
+se*, unless it overlaps with something relevant to modeling or my toolset. As you'll
 hopefully appreciate, there is a worrying lack of attention to the
 role of information technology for math model development compared to
 IT for generating and analyzing raw data. This blog intends to help
