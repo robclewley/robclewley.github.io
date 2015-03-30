@@ -1,4 +1,4 @@
-- slug: literate modeling
+- slug: literate-modeling
   name: Literate Modeling
 
 - slug: metamodeling
@@ -12,6 +12,12 @@
 
 - slug: discussion
   name: Discussion
+
+- slug: python
+  name: Python
+
+- slug: open-source
+  name: Open Source
 
 - slug: technical
   name: Technical
