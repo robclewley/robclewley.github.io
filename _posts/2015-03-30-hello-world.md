@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello World"
-comments: false
+comments: true
 redirect_from: "/2015/03/30/hello-world"
 permalink: hello-world
 ---
