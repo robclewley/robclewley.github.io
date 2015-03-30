@@ -25,7 +25,7 @@ Above all, the **vision** of my current work is to translate several
 successful approaches for handling complexity in computer science into
 the domain of *regular* science, which sadly lacks the tools to solve
 the most exciting problems involving complex physical
-systems.
+systems. IMHO.
 
 Essentially, all reputable, publishable science now being done is
 touched upon by some aspect of computational or data science. In turn,
@@ -71,7 +71,7 @@ science.
 By this, I mean applying these concepts *not* to the software used for
 doing math modeling as such, but to the process of actually *doing*
 math modeling itself. That process, admittedly, involves new
-software that can benefit from some of these concepts ... [^2]
+software that can benefit from some of these concepts ...[^2]
 
 I will talk less about progress in fancy analytic tools to data, *per
 se*, unless it overlaps with something relevant to modeling. As you'll
@@ -84,7 +84,6 @@ future of computational science.
 
 [^1]: zzzzzzzzz
 
-[^2]: and I foresee much confusion and anguish in keeping track of
-[meta levels](http://xkcd.com/917/)
+[^2]: and I foresee much confusion and anguish in keeping track of [meta levels](http://xkcd.com/917/)
 
 
