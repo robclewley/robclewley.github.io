@@ -4,12 +4,7 @@ title: About
 ---
 
 
-I am a 
+I am a scientist who plays with software until his science gets better.
 I want to use this website to help teach people new skills.
-Recently, I have
-
-Before, I was a. 
-Before that,
-Before that, 
-
+For now, a more formal biography can be found [here](http://www.ni.gsu.edu/~rclewley/biosketch/index.html) 
 
