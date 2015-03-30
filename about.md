@@ -5,13 +5,9 @@ title: About
 
 ![Here I am at the 2013 Rose Bowl.](/assets/stanford_rosebowl_photo_2013-e1361222975696-940x689.jpg)
 
-I am a Senior Data Scientist at [Twitter](http://twitter.com) working on
-their analytics team. I have always been fascinated by technology
-and especially tools for analysing and interpreting information.
+I am a 
 I want to use this website to help teach people new skills.
-Recently, I have written about 
-[Jekyll]({% post_url 2014-02-03-jekyll-github-pages-poole %}) and
-[Apache Pig]({% post_url 2014-02-11-cube-rollup-pig-data-science %}).
+Recently, I have
 
 Before, I was a. 
 Before that,
