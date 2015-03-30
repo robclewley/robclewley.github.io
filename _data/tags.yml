@@ -4,17 +4,25 @@
 - slug: metamodeling
   name: Metamodeling
 
-- slug:
-  name:
+- slug: tdd
+  name: Test-driven Development
 
-- slug:
-  name:
+- slug: reverse engineering
+  name: Reverse Engineering
 
-- slug:
-  name:
+- slug: discussion
+  name: Discussion
 
-- slug:
-  name:
+- slug: technical
+  name: Technical
 
-- slug:
-  name:
+- slug: dynamical systems
+  name: Dynamical Systems
+
+- slug: web technology
+  name: Web Technology
+
+- slug: education
+  name: Education
+
+
