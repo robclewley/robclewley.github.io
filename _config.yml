@@ -1,3 +1,5 @@
+timezone: US/Atlanta
+
 # Dependencies
 markdown:         redcarpet
 redcarpet:
@@ -7,6 +9,7 @@ highlighter:         pygments
 
 # Permalinks
 permalink:        pretty
+relative_permalinks: true
 
 # Setup
 title:            Transient Dynamic
@@ -17,6 +20,8 @@ shorturl:         robclewley.github.io
 author:
   name:           'Rob Clewley'
   url:            https://twitter.com/robclewley
+copyright:        2015
+
 
 paginate:         1
 
