@@ -9,15 +9,17 @@ permalink: hello-world
 # Building the future of computational and data science
 
 **Transient Dynamic** is a blog about my journey towards the future of
-computational and data science, and my contribution to it.  I have a
-lot of opinions and experience in doing computational science, applied
-mathematics, informatics, and scientific publishing, both as an
-academic researcher and an educator, but this blog will focus more on
-*showing* more than telling, and looking *forward* more than backward.
+computational and data science, a documentation of my new
+contributions to it and advocacy about my approach. Like many
+academics, I have a lot of opinions and experience about what's right
+and wrong in computational science, applied mathematics, informatics, and
+scientific publishing, but this blog will focus more on *showing* more
+than telling, and looking *forward* with positivity more than backward.
 
-There will be posts that fill in the background to my perspective, and
+There will be posts that fill in the background to my perspective and
 more technical posts that simply show off new tools and capabilities
-of my own or of others.
+of my own or of others. (This is also my first blog. I haven't decided
+how dry, sarcastic, or weird to be yet -- I fear the force of my British roots.)
 
 ## Extending CS concepts to apply to regular science
 
@@ -84,6 +86,6 @@ future of computational science.
 
 [^1]: zzzzzzzzz
 
-[^2]: and I foresee much confusion and anguish in keeping track of [meta levels](http://xkcd.com/917/)
+[^2]: and I foresee much confusion and anguish in keeping track of meta levels ![meta levels](http://imgs.xkcd.com/comics/hofstadter.png)
 
 
