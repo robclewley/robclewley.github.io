@@ -1,4 +1,4 @@
-timezone: US/Atlanta
+timezone: America/New_York
 
 # Dependencies
 markdown:         redcarpet
