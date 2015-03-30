@@ -2,7 +2,7 @@
 layout: post
 title: "Hello World"
 comments: false
-redirect_from: ""
+redirect_from: "/2015/03/30/hello-world"
 permalink: hello-world
 ---
 
@@ -71,7 +71,7 @@ science.
 By this, I mean applying these concepts *not* to the software used for
 doing math modeling as such, but to the process of actually *doing*
 math modeling itself. That process, admittedly, involves new
-software that can benefit from some of these concepts ...
+software that can benefit from some of these concepts ... [^2]
 
 I will talk less about progress in fancy analytic tools to data, *per
 se*, unless it overlaps with something relevant to modeling. As you'll
@@ -83,6 +83,7 @@ future of computational science.
 
 
 [^1]: zzzzzzzzz
+
 [^2]: and I foresee much confusion and anguish in keeping track of
 [meta levels](http://xkcd.com/917/)
 
