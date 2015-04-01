@@ -2,7 +2,7 @@
 layout: post
 title: "Sumatra and simulation management, or literate modeling?"
 comments: true
-tags: [literate-modeling, test-driven-modeling, description]
+tags: [literate-modeling, test-driven-modeling, discussion]
 redirect_from: ""
 permalink: sumatra-and-simulation-management-or-literate-modeling
 references:
