@@ -172,13 +172,13 @@ could involve, let's realize that *any* additional metadata created
 about a modeling process, and which is then version controlled, is a
 form of literate modeling. That could be as simple as a lab "blog"
 (digital notebook) that lab members can follow about the writer's
-goals, process, results, etc. Hence, my not-so-crazy redefinition of
-"dissemination" in the diagram refers to a social and cognitive step
-of digital sharing and discussion at the end of a mini-cycle.
+goals, process, results, etc. We could redefine "dissemination" in the
+diagram to refer to a social and cognitive step of digital sharing and
+discussion at the end of a mini-cycle.
 
 ## Reflection
 
-A more generous re-interpretation of the diagram I re-posted here is to
+So, a more generous re-interpretation of the diagram I re-posted here is to
 slightly redefine some of the terms and possibly their originally
 intended meanings. The major redefinition is that this cycle
 should not occur at the level of the whole project lifetime, but as a
