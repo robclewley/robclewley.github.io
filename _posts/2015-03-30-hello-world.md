@@ -93,9 +93,7 @@ IT for generating and analyzing raw data. This blog intends to help
 raise awareness and encourage you to get involved to improve the
 future of computational science.
 
-{% raw %}
 {% include twitter_plug.html %}
-{% endraw %}
 
 ## Footnotes
 
