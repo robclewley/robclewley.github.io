@@ -2,7 +2,7 @@
 layout: post
 title: "Sumatra and simulation management, or literate modeling?"
 comments: true
-tags: [literate-modeling, test-driven-modeling]
+tags: [literate-modeling, test-driven-modeling, discussion]
 redirect_from: ""
 permalink: sumatra-and-simulation-management-or-literate-modeling
 references:
@@ -192,6 +192,7 @@ Provided the expectation is that you will continually iterate this
 cycle on a short-term basis, and be ready to go *multiple* steps back
 up the chain as needed, I could get behind this diagram.
 
+<p><span style="display:none">claimtoken-551c2a303b3e8</span></p>
 
 ## Footnotes
 
