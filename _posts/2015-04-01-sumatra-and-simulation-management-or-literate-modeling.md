@@ -15,6 +15,18 @@ references:
 
 {% assign ref=page.references %}
 
+**Table of Contents**
+
+- [When does prototyping end and simulation begin?](#)
+- [Where is the harm?](#)
+- [A liberating development cycle picture](#)
+- [Literate modeling introduced](#)
+- [I'll take a blog for starters](#)
+- [Reflection](#)
+- [Footnotes](#)
+
+-------
+
 I'm really interested to revisit Andrew Davison's
 [Sumatra]({{ref['sumatra']}}) project, and especially the web server
 version, as part of my research into **literate modeling**, which
