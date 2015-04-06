@@ -43,7 +43,7 @@ executable and already version controlled for posterity as a GitHub
 'gist'.
 
 
-### Dependencies
+## Dependencies
 
 I have to assume you know something about applied math, differential
 equations, optimization, and python programming, otherwise we'll be
@@ -84,7 +84,7 @@ If you were actually performing the modeling steps yourself, you'd
 obviously want to have Git locally installed, and a GitHub account as
 an online repository.
 
-### Viewing and understanding the example
+## Viewing and understanding the example
 
 Ideally, the gist would be presented online in a convenient fashion
 that makes it self-documenting and amenable to easy sharing,
@@ -158,10 +158,11 @@ then it is reasonable to only require that this condition is met on a
 finite sample of points in order to guarantee it will work for all
 points in *D*. Let's keep this simple for the sake of exposition.
 
-These details constitute a problem **scenario**. It is easy to write this
-up in [YAML]() imagining what a hypothetical project management program
-might automatically process for me. YAML is a simple and great markup
-language for easily creating structure out of unstructured text.
+These details constitute a problem **scenario**. It is easy to write
+this up in [YAML](http://en.wikipedia.org/wiki/YAML) imagining what a
+hypothetical project management program might automatically process
+for me. YAML is a simple and great markup language for easily creating
+structure out of unstructured text.
 
 ~~~
 scenario-metadata:
@@ -188,10 +189,11 @@ problem well posed.
 ### Implementation
 
 For the sake of an easy example, I reused code for the classic
-[van der Pol]() nonlinear oscillator to create the model in
+[van der Pol](http://en.wikipedia.org/wiki/Van_der_Pol_oscillator)
+nonlinear oscillator to create the model in
 [model.py](https://gist.github.com/robclewley/0e54e7becf3bb017ea61#file-model-py). Since
-the internal details are meant to be hidden from the user, I simulate this by
-being clear about what is publically exported from the script
+the internal details are meant to be hidden from the user, I simulate
+this by being clear about what is publically exported from the script
 according to the list of givens in the scenario YAML file.
 
 In particular, the exports are:
@@ -290,9 +292,9 @@ step, and what its role is.
 With this presentation model in mind, a SC script should have the
 following structure:
 
- * Metadata header
+ * Metadata header (including a unique StudyContext ID tag)
  * Definitions / declarations
-	 - Given data or function (probably a necessity)
+	 - Given data or functions (probably a necessity)
 	 - (optional) Assumptions
 	 - (optional) Hypothesis, Question, or Need -- if not obvious from
        Goal statement
@@ -351,7 +353,7 @@ suggested one way to make the declarations using global-level
 triple-quoted comment strings to begin a Step's code block. This is
 just a convention that I'm exploring. In the earlier versions, I
 referred separately to tests, etc. in the YAML declarations. Later,
-they are merged as `step:test`, and so on.  In the files presented
+they are merged as `step-test`, and so on.  In the files presented
 here, I didn't attempt to be consistent with how to specify Step
 types.
 
