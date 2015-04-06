@@ -17,13 +17,13 @@ references:
 
 **Table of Contents**
 
-- [When does prototyping end and simulation begin?](#)
-- [Where is the harm?](#)
-- [A liberating development cycle picture](#)
-- [Literate modeling introduced](#)
-- [I'll take a blog for starters](#)
-- [Reflection](#)
-- [Footnotes](#)
+- [When does prototyping end and simulation begin?](#head1)
+- [Where is the harm?](#head2)
+- [A liberating development cycle picture](#head3)
+- [Literate modeling introduced](#head4)
+- [I'll take a blog for starters](#head5)
+- [Reflection](#head6)
+- [Footnotes](#head7)
 
 -------
 
@@ -50,7 +50,8 @@ place. Worse, we talk less and less about using models to generate
 they are absolutely not). But I will have to come back to this in a
 later post.
 
-## When does prototyping end and simulation begin?
+<a name="head1"></a>
+## When does prototyping end and simulation begin? 
 
 I want to piggyback on the comments that Daniel made about a coming
 revolution in scientific data management and the approach to take,
@@ -86,7 +87,8 @@ implicitly following an idealized mental model, *it's already too
 late* to envision making progress in informatics for scientific
 modeling. Let's not be that straw man....
 
-## Where *is* the harm?
+<a name="head2"></a>
+## Where *is* the harm? 
 
 An executable model already embodies so much provenance about the core
 assumptions and representational choices behind its content and formal
@@ -113,7 +115,7 @@ should involve similar informatic workflows that
 [test-driven development]({{ref['test_driven_dev']}}) does in computer
 science.
 
-
+<a name="head3"></a>
 ##  A liberating development cycle picture
 
 I personally prefer an ["Agile"]({{ref['agile']}})-like model of the
@@ -147,7 +149,7 @@ its separation from prototype exploration, learning, and *testing*, is
 harmful. The practicality of a possible solution should not be the
 reason that we dismiss the existence of the problem in the first place.
 
-
+<a name="head4"></a>
 ## Literate modeling introduced
 
 At this point, you might think my idea is worthy, but the implementation still
@@ -176,7 +178,7 @@ cost. Even without further details, if you can imagine what kind
 of workflow that might look like, then you can imagine that many
 scientistis would see that as impossibly burdensome.
 
-
+<a name="head5"></a>
 ## I'll take a blog for starters
 
 Before we explore what cool, sophisticated things literate modeling
@@ -188,6 +190,7 @@ goals, process, results, etc. We could redefine "dissemination" in the
 diagram to refer to a social and cognitive step of digital sharing and
 discussion at the end of a mini-cycle.
 
+<a name="head6"></a>
 ## Reflection
 
 So, a more generous re-interpretation of the diagram I re-posted here is to
@@ -206,6 +209,7 @@ up the chain as needed, I could get behind this diagram.
 
 <p><span style="display:none">claimtoken-551c2a303b3e8</span></p>
 
+<a name="head7"></a>
 ## Footnotes
 
 [^1]: I think we avoid a more complex picture of the cycle because we fear over-complicating the essential, and idealized flow of progress through the process.

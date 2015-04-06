@@ -11,7 +11,22 @@ references:
 {% assign ref=page.references %}
 
 
+**Table of Contents**
 
+- [Dependencies](#head1)
+- [Viewing and understanding the example](#head2)
+- [The math modeling problem](#head3)
+  - [Implementation](#head3_1)
+- [Other project preparations](#head4)
+- [Steps towards a goal: a workflow of test-driven development](#head5)
+  - [The 'StudyContext'](#head5_1)
+  - [Flexible workflow](#head5_2)
+  - [Open ontology](#head5_3)
+  - [Example Step types](#head5_4)
+  - [StudyContext object declaration syntax](#head5_5)
+  - [Commit the project when you'd commit code](#head5_6)
+  - [Bifurcate the StudyContext when it gets large or complex](#head5_7)
+- [Summary so far](#head6)
 
 ------
 
@@ -42,7 +57,7 @@ think it effectively demonstrates the principles. It is also
 executable and already version controlled for posterity as a GitHub
 'gist'.
 
-
+<a name="head1"></a>
 ## Dependencies
 
 I have to assume you know something about applied math, differential
@@ -84,6 +99,7 @@ If you were actually performing the modeling steps yourself, you'd
 obviously want to have Git locally installed, and a GitHub account as
 an online repository.
 
+<a name="head2"></a>
 ## Viewing and understanding the example
 
 Ideally, the gist would be presented online in a convenient fashion
@@ -117,7 +133,7 @@ Stage 1:
 These already reflect a few commits, partly to assist in creating backups in
 case I messed something up. (See later.)
 
-
+<a name="head3"></a>
 ## The math modeling problem
 
 Suppose we are given experimental details of an unknown Black Box
@@ -186,6 +202,7 @@ UAC:
 These seem to be the minimal, necessary elements to make a modeling
 problem well posed.
 
+<a name="head3_1"></a>
 ### Implementation
 
 For the sake of an easy example, I reused code for the classic
@@ -228,6 +245,7 @@ are pointing to the left. The thick line shows a numerically
 integrated trajectory that starts from the center of the domain, with
 the individual sample points shown as black dots.
 
+<a name="head4"></a>
 ## Other project preparations
 
 At this point, it was time to initialize a new Wing IDE python
@@ -235,8 +253,11 @@ project in a new folder, and clone the gist I began online into
 it. I then configured the Git integration tool within Wing and
 synchronized all the files between the local folder and GitHub.
 
+<a name="head5"></a>
 ## Steps towards a goal: a workflow of test-driven development
 
+
+<a name="head5_1"></a>
 ### The 'StudyContext'
 
 For want of a better name (I've considered several), a
@@ -255,7 +276,7 @@ the problem will take much longer to solve, then multiple SCs are
 recommended. A set of unresolved SCs become the project's 'backlog' of
 work to be allocated to investigators!
 
-
+<a name="head5_2"></a>
 ### Flexible workflow
 
 Since, by the nature of early model development, a lot is unknown, it
@@ -267,7 +288,7 @@ development, the test is expected to fail before the actual model
 development work is done. But the existence of the test is an
 objective goal to define the UAC of the SC.
 
-
+<a name="head5_3"></a>
 ### Open ontology
 
 By the same token, it also makes sense not to limit the user to a
@@ -323,7 +344,7 @@ develops, the mapping to the code blocks becomes more concrete as we
 lay down declarations of Steps that we will take to achieve the goal,
 and write more code to fill in the blocks we need.
 
-
+<a name="head5_4"></a>
 ### Example Step types
 
 Types of 'Step' are entirely user-defined, depending on
@@ -345,6 +366,7 @@ and from the header metadata in the child documents back to the
 parent. Again, management software should assist in tracking and
 validating such links. For now, we'll enforce it as a convention.
 
+<a name="head5_5"></a>
 ### StudyContext object declaration syntax
 
 As there is no actual project management program visiting and parsing
@@ -375,6 +397,7 @@ studycontext-step:
 ~~~
 
 
+<a name="head5_6"></a>
 ### Commit the project when you'd commit code
 
 As in a software development project, I committed the project code
@@ -407,6 +430,8 @@ You can see what changed between commits using commands like:
 git diff b854606 2215d75
 ~~~
 
+
+<a name="head5_7"></a>
 ### Bifurcate the StudyContext when it gets large or complex
 
 During rapid prototyping, I want to use meaningful script file names
@@ -446,7 +471,8 @@ drawback is that I lose the record of the order in which I created
 those Steps in the past, but the revision history (and branch tags,
 for instance) at least retains their provenance.
 
-### More next time ...
+<a name="head6"></a>
+## Summary so far
 
 We are nearly half-way done, but we haven't even tackled the
 mathematical problem yet. Summarizing so far, you've seen a mock up of
