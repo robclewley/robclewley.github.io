@@ -72,12 +72,16 @@ ensure that all `print` statements were written as function calls. If
 you correct those then all the stages are Python 3 compatible.
 
 The simple and cool
-[pyfscache](https://pypi.python.org/pypi/pyfscache) file system
-object cache manager is an optional dependency. This package minimizes
-code re-execution to build objects that can be reused across scripts
-in a common folder. Such a facility would be important in the kind of
+[pyfscache](https://pypi.python.org/pypi/pyfscache) file system object
+cache manager is an optional dependency. This package minimizes code
+re-execution to build objects that can be reused across scripts in a
+common folder. Such a facility would be important in the kind of
 workflow that I'm proposing, but in this simple example you can get
-away without it. My code runs either way.
+away without it. My code runs either way. (*Edit*: to use this package
+on my system and with numpy objects, I needed to alter some things in
+this package and add some convenience
+features. [This is my forked version](https://github.com/robclewley/pyfscache)
+for use with this project.)
 
 All of the development was done in a python-friendly IDE
 ([Wing IDE](https://wingware.com/)) alongside an interactive iPython
