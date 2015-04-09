@@ -10,6 +10,27 @@ references:
 
 {% assign ref=page.references %}
 
+**Table of Contents**
+
+- [Steps towards the goal, continued](#head1)
+  - [Breaking into Terminal Steps](#head1_1)
+  - [When Steps need to be decomposed further](#head1_2)
+- [Completing the model development](#head2)
+  - [Recap of the linear model](#head2_1)
+  - [Major repository changes](#head2_2)
+  - [Optimization step](#head2_3)
+  - [Visualizations of the results](#head2_4)
+- [Conclusions and discussion](#head3)
+  - [Summary](#head3_1)
+  - [Limitations of the implementation](#head3_2)
+  - [Weaving a tangled web of unreadability](#head3_3)
+  - [iPython notebooks to the rescue?](#head3_4)
+  - [Version control issues](#head3_5)
+  - [Further Work](#head3_6)
+
+- [Footnotes](#head4)
+
+------
 
 This is Part 2 of my posts about capturing the provenance of model
 prototyping and
@@ -392,7 +413,7 @@ passed. This is a long-winded way to tell if the SC's work is
 complete. The code may still need to be tidied up before committing
 and publishing.
 
-<a name="head3_4"></a>
+<a name="head3_3"></a>
 ### Weaving a tangled web of unreadability
 
 Finally, as Tony Fast pointed out in our discussion, python code files
@@ -472,7 +493,7 @@ issue manager that is based on inline code markup. If a python version
 matures ([this one](https://github.com/mleonard87/watson-python) is
 not there yet), I'd consider basing my project manager on this code.
 
-<a name="head3_5"></a>
+<a name="head3_4"></a>
 ### iPython notebooks to the rescue?
 
 However, iPython notebooks, as I currently appreciate them, are also
@@ -501,7 +522,7 @@ present as a single notebook document. When I discuss interactive
 tools more in future posts, and I learn more about the notebooks, my
 arguments will hopefully become clearer one way or another.
 
-<a name="head3_6"></a>
+<a name="head3_5"></a>
 ### Version control issues
 
 In terms of version control, the gist system is not sophisticated
@@ -514,7 +535,7 @@ usefully applied to tracking this mini project. A proper model project
 manager would have to wrap all the git operations and UI into a
 customized interface.
 
-<a name="head3_7"></a>
+<a name="head3_6"></a>
 ### Further work
 
 Merging and combining results and artifacts of sub-SCs that resolve
@@ -524,7 +545,7 @@ the state of the project at the resolution of the sub-SCs, the new
 artifacts can be tagged by their original SC file and then merged into
 the parent's common library for continued use in the parent SC.
 
-<a name="head3_8"></a>
+<a name="head4"></a>
 ### Footnotes
 
 [^1]: We won't bother to record the structure of the study contexts in a metadata file in this example, but a real project management system would be keeping track of the change from a single `studycontext1.py` to the folder `studycontext1/` and a database of all project SCs.
