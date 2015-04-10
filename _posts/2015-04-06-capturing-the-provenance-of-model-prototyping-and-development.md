@@ -159,6 +159,10 @@ a location), i.e.
 F: (x,y) |--> ( F(x,y)_x, F(x,y)_y )
 ~~~
 
+\\[
+F: (x,y) \mapsto \left( F_x(x,y), F_y(x,y) \right) 
+\\]
+
 We will find a 2D linear system of ordinary differential equations
 (ODEs) that matches this flow as best as possible. Its vector field
 will be named *LF*. How well should the match be? We must
@@ -170,6 +174,10 @@ model.
 ~~~
 For all (x,y) in D,   d(x,y) = || F(x,y) - LF(x,y)  || < L2_tol
 ~~~
+
+\\[
+\forall (x,y) \in D, \quad d(x,y) = || F(x,y) - LF(x,y) || < L2\_tol
+\\]
 
 Without getting too technical, if we can make guarantees about the
 continuity of *F* and the amount of nonlinearity that it may possess
