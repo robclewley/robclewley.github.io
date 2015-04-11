@@ -294,14 +294,18 @@ The visualizations are grouped into one script, and of course they
 depend on previous scripts having been called. Again, these are noted
 in the SC comment metadata.
 
+We have not addressed the original UAC, which is to ensure that *trajectories* computed from LF do not diverge more than *L2_tol* from those from F, but we will see that it's not even necessary to assess that to make a conclusion.
 
 <a name="head3"></a>
 ## Conclusions and discussion
 
 Based on the original error tolerance requested (*L2_tol* = 0.002),
-**the scenario appears to be unfeasible**! We achieved a visually
-similar-fitting vector field with a linear system, but the maximum
-error across the mesh sample was still 1.0. Without turning this
+**the scenario appears to be unfeasible** just from looking at the vector field itself!
+We achieved a visually similar-fitting vector field with a linear system, but the maximum
+error in the vectors across the mesh sample was still 1.0. There is no way such an error will satisfy the
+UAC for trajectories across this domain, which will only be compounded given the local vector error.
+
+Without turning this
 demonstration into a protracted interlude on numerical analysis, you
 can verify that the optimization algorithm had converged to a solution
 and was not going to make any large enough improvements to get the
