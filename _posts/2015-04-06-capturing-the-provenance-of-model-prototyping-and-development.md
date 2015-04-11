@@ -155,7 +155,7 @@ space is given to us. We are given a black box function from which we
 can request spatial samples of the vector field *F* (measuring flow at
 a location), i.e.
 
-\\[ F(x,y) = \left( F_x(x,y), F_y(x,y) \right) \\]
+\\[ F: (x,y) \mapsto \left( F_x(x,y), F_y(x,y) \right) \\]
 
 We will find a 2D linear system of ordinary differential equations
 (ODEs) that matches this flow as best as possible. Its vector field
@@ -173,6 +173,9 @@ in *D* (i.e. about its local variance, or bounds on its derivatives),
 then it is reasonable to only require that this condition is met on a
 finite sample of points in order to guarantee it will work for all
 points in *D*. Let's keep this simple for the sake of exposition.
+
+\\[ F: (x,y) \mapsto \left( F_x(x,y), F_y(x,y) \right) \\]
+
 
 These details constitute a problem **scenario**. It is easy to write
 this up in [YAML](http://en.wikipedia.org/wiki/YAML) imagining what a
