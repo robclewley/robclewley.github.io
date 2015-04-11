@@ -155,7 +155,9 @@ space is given to us. We are given a black box function from which we
 can request spatial samples of the vector field *F* (measuring flow at
 a location), i.e.
 
-`\\[ F: (x,y) \mapsto ( F_x(x,y), F_y(x,y) ) \\]`
+<code>
+\\[ F: (x,y) \mapsto ( F_x(x,y), F_y(x,y) ) \\]
+</code>
 
 We will find a 2D linear system of ordinary differential equations
 (ODEs) that matches this flow as best as possible. Its vector field
@@ -165,7 +167,9 @@ error tolerance *L2_tol* that our model must achieve in the standard Euclidean
 (L2) metric *d(x,y)* applied to any sampled vectors in *D* compared to the linear
 model.
 
-`\\[ \forall (x,y) \in D, \quad d(x,y) = || F(x,y) - LF(x,y) || < L2tol \\]`
+<code>
+\\[ \forall (x,y) \in D, \quad d(x,y) = || F(x,y) - LF(x,y) || < L2tol \\]
+</code>
 
 Without getting too technical, if we can make guarantees about the
 continuity of *F* and the amount of nonlinearity that it may possess
