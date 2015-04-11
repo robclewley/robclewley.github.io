@@ -155,7 +155,7 @@ space is given to us. We are given a black box function from which we
 can request spatial samples of the vector field *F* (measuring flow at
 a location), i.e.
 
-\\[ F(x,y) = \\]
+\\[ F: (x,y) \mapsto \\]
 
 We will find a 2D linear system of ordinary differential equations
 (ODEs) that matches this flow as best as possible. Its vector field
