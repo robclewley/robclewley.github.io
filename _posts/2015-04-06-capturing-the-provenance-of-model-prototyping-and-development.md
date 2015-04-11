@@ -156,7 +156,7 @@ can request spatial samples of the vector field *F* (measuring flow at
 a location), i.e.
 
 <code>
-"\[ F: (x,y) \mapsto ( F_x(x,y), F_y(x,y) ) \]"
+$$ F: (x,y) \mapsto ( F_x(x,y), F_y(x,y) ) $$
 </code>
 
 We will find a 2D linear system of ordinary differential equations
@@ -168,7 +168,7 @@ error tolerance *L2_tol* that our model must achieve in the standard Euclidean
 model.
 
 <code>
-"\[ \forall (x,y) \in D, \quad d(x,y) = || F(x,y) - LF(x,y) || < L2tol \]"
+$$ \forall (x,y) \in D, \quad d(x,y) = || F(x,y) - LF(x,y) || < L2tol $$
 </code>
 
 Without getting too technical, if we can make guarantees about the
