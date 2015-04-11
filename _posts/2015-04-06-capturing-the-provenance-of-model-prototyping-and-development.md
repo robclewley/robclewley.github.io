@@ -156,7 +156,7 @@ can request spatial samples of the vector field *F* (measuring flow at
 a location), i.e.
 
 <code>
-$$ F: (x,y) \mapsto ( F_x(x,y), F_y(x,y) ) $$
+$$ x + y $$
 </code>
 
 We will find a 2D linear system of ordinary differential equations
