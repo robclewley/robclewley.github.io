@@ -153,11 +153,7 @@ For simplicity, let's assume that we know we are working in two
 dimensions only, and that a suitable sub-domain *D* of two-dimensional
 space is given to us. We are given a black box function from which we
 can request spatial samples of the vector field *F* (measuring flow at
-a location), i.e.
-
-~~~
-F: (x,y) |--> ( F(x,y)_x, F(x,y)_y )
-~~~
+a location), i.e. using a call `F(x,y)` that returns a 2D flow vector.
 
 We will find a 2D linear system of ordinary differential equations
 (ODEs) that matches this flow as best as possible. Its vector field
@@ -167,9 +163,7 @@ error tolerance *L2_tol* that our model must achieve in the standard Euclidean
 (L2) metric *d(x,y)* applied to any sampled vectors in *D* compared to the linear
 model.
 
-~~~
-For all (x,y) in D,   d(x,y) = || F(x,y) - LF(x,y)  || < L2_tol
-~~~
+\\[ \forall (x,y) \in D, \quad d(x,y) = || F(x,y) - LF(x,y) || < L2tol \\]
 
 Without getting too technical, if we can make guarantees about the
 continuity of *F* and the amount of nonlinearity that it may possess
