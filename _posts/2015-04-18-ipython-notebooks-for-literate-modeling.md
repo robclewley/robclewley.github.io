@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "iPython notebooks for literate modeling"
+title: "ipython notebooks for literate modeling"
 comments: true
 tags: ['technical', 'python', 'web-technology']
 redirect_from: ""
