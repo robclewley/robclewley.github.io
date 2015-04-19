@@ -128,7 +128,7 @@ One of the most useful things I can do in my IDE is to graphically set breakpoin
   workflow idea, there is therefore a need to flatten the json to
   create a regular `.py` file before doing the `diff` -- but to also
   include the markup somehow, in case of comment/tag changes in the
-  YAML!
+  YAML! (**Addendum: see comments below!**)
 
 
 Nonetheless, with some caveats, I now see how I could use ipython
