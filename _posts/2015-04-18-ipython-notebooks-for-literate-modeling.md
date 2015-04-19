@@ -25,14 +25,16 @@ extension idea opened my eyes to simple ways in which an extension can
 enable literate modeling. For one thing, once I understood what to do
 with the file (no documentation was provided), I realized how easy it
 is to write custom extensions to hook into other kernel processes that
-could help me achieve my ideal exploratory modeling setup. But first,
-the instructions...
+could help me achieve my ideal exploratory modeling setup.
 
-I want to auto-load my extensions and modules for my notebooks but not
+I also want to auto-load my extensions and modules for my notebooks but not
 for my regular ipython sessions (partly because those loads create
-warnings and pollute my default namespace).
+warnings and pollute my default namespace). [Autoreload](https://ipython.org/ipython-doc/dev/config/extensions/autoreload.html)
+is a built-in extension that simply reloads any module dependencies if they are edited outside of
+the session.
 
-Write these config options (based on uncommenting the appropriate
+But first,
+the instructions. Write these config options (based on uncommenting the appropriate
 lines in the config file) into
 `.ipython/profile_default/ipython_kernel_config.py`, which is probably
 in your home directory:
@@ -49,13 +51,12 @@ any overlapping options.
 
 ### Using the extensions
 
-Anyway, configuration aside, I can get 'autoreload' and 'yaml\_magic'
-to work and the results are quite
-inspirational. [Autoreload](https://ipython.org/ipython-doc/dev/config/extensions/autoreload.html)
-simply reloads any module dependencies if they are edited outside of
-the session. This is great for exploratory workflows.
+After some configuration fuss, I have 'autoreload' and 'yaml\_magic'
+working and the results are quite
+inspirational. Autoreload is great for exploratory workflows when you
+edit module dependencies while still working in a dependent module/session.
 
-yaml\_magic is not fully documented but seems to allow you to write
+yaml\_magic is not fully documented but allows you to write
 YAML directly into a code cell, prefix it with `%%yaml` and have the
 YAML interpreted into a dictionary (as one might expect). Also, adding
 a name after the directive assigns this dictionary to a variable with
@@ -109,7 +110,7 @@ This ensures that 'import' is overloaded to check for the `ipynb` file extension
 
 ## Debugging
 
-One of the most useful things I can do in my IDE is to graphically set breakpoints and trace bugs using the live interpreter. There is the opportunity to interact post-mortem after a bug using `%debug` in the next cell after the traceback, and it works well enough for that aspect of tracing, at least.
+One of the most useful things I can do in my IDE is to graphically set breakpoints and trace bugs using the live interpreter. There is the opportunity to interact post-mortem after a bug, using `%debug` in the next cell after the traceback. This works well enough for that aspect of tracing, at least.
 
 ## Remaining issues
 
