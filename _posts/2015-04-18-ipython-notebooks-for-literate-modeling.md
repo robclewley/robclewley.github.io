@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "iPython notebooks for literate modeling"
+title: "ipython notebooks for literate modeling"
 comments: true
 tags: ['technical', 'python', 'web-technology']
 redirect_from: ""
@@ -19,20 +19,22 @@ me in picturing the use of ipython notebooks for literate modeling.
 ## Extensions
 
 [YAML_magic](https://gist.github.com/bollwyvl/aa7131d57195f86fb9c0) is
-an ipython notebook extension by 'bollwyvl' that enables raw YAML to
+an ipython notebook extension by Nick Bollweg that enables raw YAML to
 be interpreted in a code cell when prefixed by `%%yaml`. This
 extension idea opened my eyes to simple ways in which an extension can
 enable literate modeling. For one thing, once I understood what to do
-with the file (no documentation was provided), I realized how easy it
-is to write custom extensions to hook into other kernel processes that
-could help me achieve my ideal exploratory modeling setup. But first,
-the instructions...
+with the file (no documentation was provided in the original Gist),
+I realized how easy it is to write custom extensions to hook into other kernel processes that
+could help me achieve my ideal exploratory modeling setup.
 
-I want to auto-load my extensions and modules for my notebooks but not
+I also want to auto-load my extensions and modules for my notebooks but not
 for my regular ipython sessions (partly because those loads create
-warnings and pollute my default namespace).
+warnings and pollute my default namespace). [Autoreload](https://ipython.org/ipython-doc/dev/config/extensions/autoreload.html)
+is a built-in extension that simply reloads any module dependencies if they are edited outside of
+the session.
 
-Write these config options (based on uncommenting the appropriate
+But first,
+the instructions. Write these config options (based on uncommenting the appropriate
 lines in the config file) into
 `.ipython/profile_default/ipython_kernel_config.py`, which is probably
 in your home directory:
@@ -49,13 +51,14 @@ any overlapping options.
 
 ### Using the extensions
 
-Anyway, configuration aside, I can get 'autoreload' and 'yaml\_magic'
-to work and the results are quite
-inspirational. [Autoreload](https://ipython.org/ipython-doc/dev/config/extensions/autoreload.html)
-simply reloads any module dependencies if they are edited outside of
-the session. This is great for exploratory workflows.
+After some configuration fuss, I have 'autoreload' and 'yaml\_magic'
+working and the results are quite
+inspirational. Autoreload is great for exploratory workflows when you
+edit module dependencies while still working in a dependent module/session.
 
-yaml\_magic is not fully documented but seems to allow you to write
+yaml\_magic is not fully documented (at the time of writing, but see
+comments below about the [new repo](https://github.com/bollwyvl/yamlmagic)
+and PyPI uploads!) but allows you to write
 YAML directly into a code cell, prefix it with `%%yaml` and have the
 YAML interpreted into a dictionary (as one might expect). Also, adding
 a name after the directive assigns this dictionary to a variable with
@@ -109,7 +112,7 @@ This ensures that 'import' is overloaded to check for the `ipynb` file extension
 
 ## Debugging
 
-One of the most useful things I can do in my IDE is to graphically set breakpoints and trace bugs using the live interpreter. There is the opportunity to interact post-mortem after a bug using `%debug` in the next cell after the traceback, and it works well enough for that aspect of tracing, at least.
+One of the most useful things I can do in my IDE is to graphically set breakpoints and trace bugs using the live interpreter. There is the opportunity to interact post-mortem after a bug, using `%debug` in the next cell after the traceback. This works well enough for that aspect of tracing, at least.
 
 ## Remaining issues
 
@@ -127,7 +130,7 @@ One of the most useful things I can do in my IDE is to graphically set breakpoin
   workflow idea, there is therefore a need to flatten the json to
   create a regular `.py` file before doing the `diff` -- but to also
   include the markup somehow, in case of comment/tag changes in the
-  YAML!
+  YAML! (**Addendum: see comments below!**)
 
 
 Nonetheless, with some caveats, I now see how I could use ipython
