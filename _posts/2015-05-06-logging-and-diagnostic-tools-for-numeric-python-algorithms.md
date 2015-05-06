@@ -12,6 +12,7 @@ references:
 
 
 **Table of Contents**
+
 - [The need for better diagnostics with complex algorithms](#head1)
 	- The worst offender is the hidden assumptions
 	- Towards test-driven analysis
