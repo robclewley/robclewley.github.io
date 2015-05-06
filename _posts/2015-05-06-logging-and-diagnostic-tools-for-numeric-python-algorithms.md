@@ -12,6 +12,32 @@ references:
 
 
 **Table of Contents**
+- [The need for better diagnostics with complex algorithms](#head1)
+	- The worst offender is the hidden assumptions
+	- Towards test-driven analysis
+- [Pre-requisites for this demo](#head2)
+	- Code dependencies
+	- Knowledge dependencies
+	- Other assumptions
+- [Demonstration examples](#head3)
+	- Function 1
+	- Function 2
+	- Bisection with a well behaved function
+		- Attempt 1: Success
+		- A look through the test script
+	- Secant method with a well behaved function
+		- Attempt 1: First bug
+		- Attempt 2: Second bug
+		- Attempt 2: Third bug
+		- Attempt 3: Success
+	- Bisection with a poorly behaved function
+	- Secant method with a poorly behaved function
+	- Viewing the logs
+- [Discussion](#head4)
+	- Overhead
+	- Next steps
+	- Not using ipython notebooks, again
+- [Next installment with Fovea](#head5)
 
 ----------
 
@@ -70,6 +96,7 @@ We have enough new ideas to cover here that, for the time being, I
 won't be presenting this work in the form of my [literate modeling
 workflow](http://robclewley.github.io/capturing-the-provenance-of-model-prototyping-and-development/).
 
+<a name="head1"></a>
 ## The need for better diagnostics with complex algorithms
 
 Let's say you write an algorithm, or you are asked to apply an
@@ -140,15 +167,16 @@ write appropriate test. Fovea can play a role in this. The literate
 modeling principles could also lead to a clearer understanding of the
 convoluted assumptions when dealing with nested algorithms.
 
+<a name="head2"></a>
 ## Pre-requisites for this demo
 
 ### Code dependencies
 
-Download [Fovea](TAGGED VERSION!) from github and install with the
-usual `python setup.py install`. This link is to a version tagged at
-the time of writing, to keep with the functionality exactly as
-presented here. You can, of course, also get the latest version and
-see what has progressed in the meantime.
+Download [Fovea](http://github.com/robclewley/fovea/tree/blog_post)
+from github and install with the usual `python setup.py install`. This
+link is to a version tagged at the time of writing, to keep with the
+functionality exactly as presented here. You can, of course, also get
+the latest version and see what has progressed in the meantime.
 
 At present, the package depends on `shapely`, `descartes`, `pyyaml`,
 `euclid`, [`PyDSTool`](http://github.com/robclewley/pydstool) (latest
@@ -208,6 +236,7 @@ this should not be a difficult assumption to satisfy.
 
 --------
 
+<a name="head3"></a>
 ## Demonstration examples
 
 I am using my fork of a
@@ -556,17 +585,20 @@ KeyError: 'Layer name already exists in figure!'
 
 This immediately uncovered a problem inherited from the original
 numeric code that I hadn't even noticed. `n` was set to 1
-([line 46]()) and then not being incremented in the loop. Thus, when
-the logger tried to create new log entries uniquely named according to
-the value of `n`, there was a name clash. This is helpful because the
-algorithm might successfully converge before `NMAX` is reached in
-testing, and a case that converged extremely slowly or even diverge
-would not be caught. On one hand, this motivates the need for
-unit tests to cover all scenarios and catch these issues up front,
-which is the ideal way to proceed. But our logging approach is also
-effective at uncovering broken internal logic.
+([line 109](http://github.com/robclewley/fovea/blob/blog_post/examples/root_finding/num_modded.py#L109))
+and then not being incremented in the loop. Thus, when the logger
+tried to create new log entries uniquely named according to the value
+of `n`, there was a name clash. This is helpful because the algorithm
+might successfully converge before `NMAX` is reached in testing, and a
+case that converged extremely slowly or even diverge would not be
+caught. On one hand, this motivates the need for unit tests to cover
+all scenarios and catch these issues up front, which is the ideal way
+to proceed. But our logging approach is also effective at uncovering
+broken internal logic.
 
-So, I added an increment ([line 154]()) and tried again.
+So, I added an increment for `n`
+([line 154](http://github.com/robclewley/fovea/blob/blog_post/examples/root_finding/num_modded.py#L154))
+and tried again.
 
 #### Attempt 2: Second bug
 
@@ -759,6 +791,7 @@ function as `filter_log`.
 
 ------------
 
+<a name="head4"></a>
 ## Discussion
 
 ### Overhead
@@ -820,6 +853,7 @@ markup. Given that my demo involves multiple files as well, I didn't
 see the added value in either developing or presenting this demo as a
 notebook. Please feel free to enlighten me further if you disagree.
 
+<a name="head5"></a>
 ## Next installment with Fovea
 
 Next time we look at Fovea, we'll diagnose a much more sophisticated
