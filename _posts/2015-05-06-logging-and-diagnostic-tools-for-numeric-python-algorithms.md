@@ -179,6 +179,10 @@ link is to a version tagged at the time of writing, to keep with the
 functionality exactly as presented here. You can, of course, also get
 the latest version and see what has progressed in the meantime.
 
+**ADDENDUM 1: For Python 3.x users, I had to subsequently update the github repo, so checkout the latest one**
+
+**ADDENDUM 2: For Windows users, you may need to install pyeuclid from my github fork (covers some Python 3 compatibility not present in PyPI) and the [geos](http://trac.osgeo.org/geos/) dependency for the python shapely package. Binaries are available by independently installing shapely from [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely) or you can try to do it yourself using the appropriate version of [OSGeo4W](http://trac.osgeo.org/osgeo4w/).**
+
 At present, the package depends on `shapely`, `descartes`, `pyyaml`,
 `euclid`, [`PyDSTool`](http://github.com/robclewley/pydstool) (latest
 github version at time of writing or the forthcoming v0.90.1 for those
