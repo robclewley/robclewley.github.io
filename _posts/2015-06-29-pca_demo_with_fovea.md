@@ -13,7 +13,9 @@ Alex Kuefler. He has been busy developing Fovea, the new tool for
 [interactively investigating and analyzing complex data and models](http://www.google-melange.com/gsoc/project/details/google/gsoc2015/akuefler/5668600916475904), and
 has a demo in the context of data dimensionality reduction to show off
 some new features and possibilities. It also acts as a first tutorial in how
-you can set up your own Fovea-based project, about which there will be more._
+you can set up your own Fovea-based project, about which there will be more.
+We have recently improved support for Python 3, and the latest version can be
+found on [github](https://github.com/robclewley/fovea)_
 
 
 **Table of Contents**
