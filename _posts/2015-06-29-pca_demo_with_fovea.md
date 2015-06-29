@@ -17,6 +17,7 @@ you can set up your own Fovea-based project, about which there will be more._
 
 
 **Table of Contents**
+
 - [Introduction](#head1)
 
 - [Setting Up Fovea](#head2)
@@ -27,6 +28,7 @@ you can set up your own Fovea-based project, about which there will be more._
 
 - [Adapting This Example To Your Application](#head5)
 
+- [Conclusion](#head6)
 
 {% assign ref=page.references %}
 
