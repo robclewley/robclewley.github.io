@@ -18,10 +18,15 @@ you can set up your own Fovea-based project, about which there will be more._
 
 **Table of Contents**
 - [Introduction](#head1)
+
 - [Setting Up Fovea](#head2)
+
 - [Exploratory Analysis](#head3)
+
 - [High-Dimensional Data](#head4)
+
 - [Adapting This Example To Your Application](#head5)
+
 
 {% assign ref=page.references %}
 
@@ -33,7 +38,7 @@ If you’ve worked with data, you’ve probably heard of principal component ana
 
 Let’s start off in everyone’s three favorite dimensions (x, y, and z) before working our way up.  Consider the following dataset:
 
-![2D disc in a 3D plane](https://github.com/robclewley/robclewley.github.io/blob/master/images/PCA_images/3ddisc.png?raw=true)
+![2D disc in a 3D plane](https://github.com/robclewley/robclewley.github.io/blob/master/assets/PCA_images/3ddisc.png?raw=true)
 
 Although I’ve taken the trouble to draw this data-disc in the volume of a cube, I really didn’t need to. All the action is happening across the xy-plane with the z-axis contributing nothing to our understanding – I may as well have just appended some arbitrary coordinate to every point making up an otherwise interesting 2D object. In fact, this is exactly what I did.
 
@@ -88,7 +93,7 @@ We end up with a few sets of points that still sit on 2D discs, but appear to ma
 
 Although these data have tricked the x, y, and z axes, visualization makes it apparent that we’re expressing our data in more dimensions than we need.
 
-![Three rotations of the 2D disc through 3-space](https://github.com/robclewley/robclewley.github.io/blob/master/images/PCA_images/three_rotations.png?raw=true)
+![Three rotations of the 2D disc through 3-space](https://github.com/robclewley/robclewley.github.io/blob/master/assets/PCA_images/three_rotations.png?raw=true)
 
 PCA’s job is to throw out the x, y and z axes and come up with a new set of axes that line up better with the data. In other words, PCA produces an ordered set of orthogonal vectors (called the principal components or PC’s), such that the first PC points in the direction of greatest variance in the data, the second in the direction of second greatest variance (constrained to be orthogonal to the first), and so forth. It is perfectly valid to come up with a new set that has the same number of vectors as the old one, thus capturing ALL the data’s variance. But the real fun happens when we ask ourselves if we can get away with having fewer axes (dimensions) than we started with.
 
@@ -229,18 +234,18 @@ After a bit of playing around with our visualization, a few things should become
 
 First, each rotation’s PC’s line up beautifully with the data, as one would expect from this surrogate dataset. If you rotate the data-disc to be edge-on, you’ll see that data-points and PC’s all fall in a straight line. If we want to fuzzy-up the disc with the _noise()_ function provided in _pca/_disc_, we may lose our straight line, but the PC’s will still point across the breadth of the data, as we would hope.
 
-![disc and PC's](https://github.com/robclewley/robclewley.github.io/blob/master/images/PCA_images/noisedisc_w_axes.png?raw=true)
-![dic and PC's, lined up](https://github.com/robclewley/robclewley.github.io/blob/master/images/PCA_images/noisedisc_w_axes_edgeon.png?raw=true)
+![disc and PC's](https://github.com/robclewley/robclewley.github.io/blob/master/assets/PCA_images/noisedisc_w_axes.png?raw=true)
+![dic and PC's, lined up](https://github.com/robclewley/robclewley.github.io/blob/master/assets/PCA_images/noisedisc_w_axes_edgeon.png?raw=true)
 
 Second, the subplot “AFTER” projection looks quite a bit like the “BEFORE” image in the 3D axes. We may not be able to swivel it around, but if you turn the high-dimensional data so that it’s flat face is facing toward you, you will have effectively recreated the “AFTER” plot in the “BEFORE” axes (you may need to use the zoom widget to correct the scales).
 
-![After projection, noiseless 2D data looks the same](https://github.com/robclewley/robclewley.github.io/blob/master/images/PCA_images/faceon.png?raw=true)
+![After projection, noiseless 2D data looks the same](https://github.com/robclewley/robclewley.github.io/blob/master/assets/PCA_images/faceon.png?raw=true)
 
 The takeaway message here is that PCA is ultimately just a linear projection (or flattening) of data in one space into some other space. Nothing is intrinsically different – it is merely squished. However, when we start dealing with more dimensions (and we’re forced to view 2D/3D projections of bigger data) the myriad projections we choose to get an impression of the data may all look quite different. In such cases, the ability to compare before and after images (perhaps plotting different projections of the data rather than rotations) can be instrumental.
 
 And third, the “variance by components” plot is very boring. Because we’re plotting an almost perfect disc, the “direction of greatest variance” we use as the first PC has only marginally more variance than the second component. We can spice it up by using pca_disc’s stretch function to skew the data and watch as the graph becomes less even. But as always, the real intrigue happens when we add more dimensions.
 
-![Notice that the angle of the variance line-plot corresponds to amount same-colored disc is skewed](https://github.com/robclewley/robclewley.github.io/blob/master/images/PCA_images/stretches_and_variances.png?raw=true)
+![Notice that the angle of the variance line-plot corresponds to amount same-colored disc is skewed](https://github.com/robclewley/robclewley.github.io/blob/master/assets/PCA_images/stretches_and_variances.png?raw=true)
 
 <a name="head4"></a>
 ##High-Dimensional Data
@@ -276,7 +281,7 @@ def ortho_proj_mat(n, m):
 
 However, when dealing with 6D data, there is more leeway to select how many axes we want our new space to have. For this particular example, the third subplot reveals a sharp gap between the variance explained by the first 2 PCs and the remaining 3 for the X1 (red) dataset. 
 
-![The disparity was created by applying _stretch()_ to X1 along 2 different axes](https://github.com/robclewley/robclewley.github.io/blob/master/images/PCA_images/variance_gap.png?raw=true)
+![The disparity was created by applying _stretch()_ to X1 along 2 different axes](https://github.com/robclewley/robclewley.github.io/blob/master/assets/PCA_images/variance_gap.png?raw=true)
 
 If this were real psychological data, we might conclude that we were too hasty to settle on four new dimensions, when what we really needed was just a “positive emotion” axis and a “negative emotion” axis. Then again, even if two vectors explain a big portion, we would still be throwing out a lot of variance if we ignore the other 3 completely. In other words, the process of picking the best dimensionality is non-deterministic, context-dependent, and leaves room for trial and error.
 
@@ -334,7 +339,7 @@ def keypress(self, event):
 
 Note also the print statement and _highlight/_eigens()_ function, called when the up or down keys are pressed. Each cues the user to the effects their changes of dimensionality has. In the case of the print statement, this cue is text. In the case of _highlight/_eigens()_, vertical bars are drawn through each component in the "Variance by Components" currently being viewed. Another more subtle indication of the current dimensionality is the number of colored axes visible in the "BEFORE" plot, which will always be the same as the number of vertical bars.
 
-![Four components are currently in use](https://github.com/robclewley/robclewley.github.io/blob/master/images/PCA_images/highlighted_eigens.png?raw=true)
+![Four components are currently in use](https://github.com/robclewley/robclewley.github.io/blob/master/assets/PCA_images/highlighted_eigens.png?raw=true)
 
 The end result is a system that lets the user move “horizontally” through different clusters of data and “vertically” through candidate dimensionalities for the reduced data. We can view the variance subplot or printed reports of variance captured to find our low-dimensional sweet-spot, all while referring to the “BEFORE” and “AFTER” images as sanity checks.
 
