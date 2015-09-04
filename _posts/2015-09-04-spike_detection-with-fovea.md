@@ -11,9 +11,9 @@ references:
 _Today's post is the second that is guest-contributed by my [Google Summer of Code](http://incf.org/gsoc/2015) student,
 Alex Kuefler. He has just finished his project on further developing Fovea, the tool for
 [interactively investigating and analyzing complex data and models](http://www.google-melange.com/gsoc/project/details/google/gsoc2015/akuefler/5668600916475904).
-The [previous post](http://robclewley.github.io/pca_demo_with_fovea/) described setting up Fovea and using it to investigate a PCA of multielectrode spike data.
+The [previous post](http://robclewley.github.io/pca_demo_with_fovea/) described setting up Fovea and using it to investigate a PCA of multielectrode spike data._
 
-As usual, and the latest version of the project source code, including the code for this post's example, can be
+_As usual, and the latest version of the project source code, including the code for this post's example, can be
 found on [github](https://github.com/robclewley/fovea)._
 
 **Table of Contents**
