@@ -11,7 +11,7 @@ references:
 _Today's post is the second that is guest-contributed by my [Google Summer of Code](http://incf.org/gsoc/2015) student,
 Alex Kuefler. He has just finished his project on further developing Fovea, the tool for
 [interactively investigating and analyzing complex data and models](http://www.google-melange.com/gsoc/project/details/google/gsoc2015/akuefler/5668600916475904).
-The [previous post]() described setting up Fovea and using it to investigate a PCA of multielectrode spike data.
+The [previous post](http://robclewley.github.io/pca_demo_with_fovea/) described setting up Fovea and using it to investigate a PCA of multielectrode spike data.
 
 As usual, and the latest version of the project source code, including the code for this post's example, can be
 found on [github](https://github.com/robclewley/fovea)._
@@ -208,7 +208,7 @@ The fourth subplot, “Projected Spikes”, can be interpreted as a graph of the
 
 ![Comparing PCs and Spikes]((https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/all_plots_w_selected_spike_w_notes.png?raw=true)
 
-In other words, this spike contains a LOT of first PC (except flipped upside-down, as the weight is negative), and a fair amount, but substantially less of the second PC. This finding accords with intuition, as the big peak of the red PC looks like an inversion of the spike’s V-shaped refractory period (see my overlaid box A), and they both share a trough or hill at the end (see: B). Similarly, the flat onset and high peak of the spike resemble the first third of the green PC (see: C).
+In other words, this spike contains a LOT of first PC (except flipped upside-down, as the weight is negative), and a fair amount, but substantially less of the second PC. This finding accords with intuition, as the big peak of the red PC looks like an inversion of the spike’s V-shaped refractory period (see my overlaid box A, which is not part of the Fovea output), and they both share a trough or hill at the end (see: B). Similarly, the flat onset and high peak of the spike resemble the first third of the green PC (see: C).
 
 You may also notice that only the first and second PCs are fully drawn in, whereas the third is dotted out. This indicates the first and second PCs are being used as the axes of the fourth subplot. By clicking on the dotted PC, the user can change the projection axes of the “Projected Spikes” subplot. Below we see the same selected spike, but shown on new axes:
 
@@ -230,7 +230,7 @@ On the other hand, projecting data onto the third/second PCs is less clean. Not 
 
 ![Second and third PC projections classified]((https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/colors_third_and_second.png?raw=true)
 
-My placement of bounding boxes on this projection was more arbitrary, as these clusters weren’t as clearly separated. Although some of the colorations accord with what we’d expect, in this projection the difference between the high-peaked “classic” spikes and the multi-unit noise we picked out from the previous example doesn’t come across (both are painted in black and belong to the large, blurry cluster in the middle). However, this projection isn’t entirely without merit. Consider the blue and green spikes. In the previous example, these were all bunched together into the same group. But it’s clear from this projection that although both sets have a distinctive V shape, for one group they precede the peak, and for the other, they follow it.
+My placement of rectangular bounding boxes using Fovea's "b" command in this projection was more arbitrary, as these clusters weren’t as clearly separated. Although some of the colorations accord with what we’d expect, in this projection the difference between the high-peaked “classic” spikes and the multi-unit noise we picked out from the previous example doesn’t come across (both are painted in black and belong to the large, blurry cluster in the middle). However, this projection isn’t entirely without merit. Consider the blue and green spikes. In the previous example, these were all bunched together into the same group. But it’s clear from this projection that although both sets have a distinctive V shape, for one group they precede the peak, and for the other, they follow it.
 
 Although the literature on classification algorithms is extensive, the fact that we can turn the different “knobs” provided by Fovea and come up with unexpected results suggests the benefits of visualization for exploratory analysis.
 
