@@ -90,7 +90,7 @@ Looking at this plot, we want to determine which peaks came from Alice, which ca
 Finding true positives means admitting false positives. Such is life. When setting a threshold (i.e., the minimum acceptable height for a peak in the waveform to be considered an action potential) we invariably exclude some interesting spikes from our analysis. Or we error in the opposite direction and admit noise that’s tall enough to ride. Spike detection is a recurring theme of the last blogpost: data analysis is replete will subjective judgments, but visual diagnostics can help inform us before we make decisions.
 Using Fovea’s new callbacks, we can create a threshold line to be translated up and down the waveform, admitting (or dismissing) candidate spikes as it moves along. Pressing “l” will activate line creation mode, at which point, a _line\_GUI_ object can be drawn on the axes by clicking and dragging. Once created, we can produce a perfectly horizontal threshold that extends the breadth of the data by pressing “m”.
 
-![lines before and after 'm' press]((https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/both_lines.png?raw=true)
+![lines before and after 'm' press](https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/both_lines.png?raw=true)
 
 In spikesort.py, this line won’t start detecting spikes until it’s been renamed “thresh”. Since this _line\_GUI_ is our currently selected object (having just created it), we can update its name with the following call:
 
@@ -206,7 +206,7 @@ The important thing to notice about the PCs in the third subplot is that they lo
 
 The fourth subplot, “Projected Spikes”, can be interpreted as a graph of the weights used to scale the PCs. In the below image, we use Fovea’s new picker tools to select a data-point in the fourth subplot, which highlights its corresponding detected spike as well. The chosen point is at approximated -230 on the x-axis (the red PC) and +40 on the y-axis (the green PC). 
 
-![Comparing PCs and Spikes]((https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/all_plots_w_selected_spike_w_notes.png?raw=true)
+![Comparing PCs and Spikes](https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/all_plots_w_selected_spike_w_notes.png?raw=true)
 
 In other words, this spike contains a LOT of first PC (except flipped upside-down, as the weight is negative), and a fair amount, but substantially less of the second PC. This finding accords with intuition, as the big peak of the red PC looks like an inversion of the spike’s V-shaped refractory period (see my overlaid box A, which is not part of the Fovea output), and they both share a trough or hill at the end (see: B). Similarly, the flat onset and high peak of the spike resemble the first third of the green PC (see: C).
 
@@ -218,17 +218,17 @@ You may also notice that only the first and second PCs are fully drawn in, where
 ##Classification
 Two differences should stand out when projecting onto the first/second PCs rather than the second/third PCs. First, the data projected onto the first/second PCs should have a greater tendency to cluster.
 
-![The projected spikes subplot for first/second and third/second projections]((https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/compare_fourth_subplots.png?raw=true)
+![The projected spikes subplot for first/second and third/second projections](https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/compare_fourth_subplots.png?raw=true)
 
 Second, when we introspect these clusters they should tend to be more cohesive than groupings that show up when projecting to the second/third PCs. In other words, if we look at only those detected spike profiles that go along with a given cluster, they should all look pretty similar to one another. We use a combination of key-presses and context objects to facilitate this process. Pressing “b”, we create _box\_GUI_s in the fourth subplot to fit around potential clusters of data point. When one of these bounding boxes is selected (in bold), we can then press either “1”, 2”, or “3” to color the points in that box red, green or blue, respectively (“0” returns them to black). The detected spike profiles will receive the new colors as well. Below, we see a few clusters grouped in this way:
 
-![First and second PC projections classified]((https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/colors_first_and_second.png?raw=true)
+![First and second PC projections classified](https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/colors_first_and_second.png?raw=true)
 
 Here, four distinct clusters have been picked out and they’re all fairly easy to describe. The red spikes look like “classic” action potentials, characterized by a flat onset, high peak, and slow return to baseline. The green spikes start out with a sharp V-shape and have a distinctive, yet lower peak. The blue spikes are characterized by single, smooth swells. And finally, the black spikes always manage to cross the mean of the data, and are perhaps just noise or multi-unit activity.
 
 On the other hand, projecting data onto the third/second PCs is less clean. Not only do the clusters seem less distinctive, but the spike profiles they group together don’t appear to have very much in common:
 
-![Second and third PC projections classified]((https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/colors_third_and_second.png?raw=true)
+![Second and third PC projections classified](https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/colors_third_and_second.png?raw=true)
 
 My placement of rectangular bounding boxes using Fovea's "b" command in this projection was more arbitrary, as these clusters weren’t as clearly separated. Although some of the colorations accord with what we’d expect, in this projection the difference between the high-peaked “classic” spikes and the multi-unit noise we picked out from the previous example doesn’t come across (both are painted in black and belong to the large, blurry cluster in the middle). However, this projection isn’t entirely without merit. Consider the blue and green spikes. In the previous example, these were all bunched together into the same group. But it’s clear from this projection that although both sets have a distinctive V shape, for one group they precede the peak, and for the other, they follow it.
 
