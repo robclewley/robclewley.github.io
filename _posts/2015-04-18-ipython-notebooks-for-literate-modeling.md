@@ -123,6 +123,8 @@ One of the most useful things I can do in my IDE is to graphically set breakpoin
   per se). [This approach](https://github.com/jupyter/nbviewer)
   requires docker but looks relatively simple. Anyway, this is an
   inconvenient extra step to quickly get a view of the code.
+   (**Addendum: Jupyter notebooks can now export to .py easily from
+  the File menu**)
 * There are no line numbers for reference, and if I can't edit
   natively in my IDE then I can't use breakpoints so easily.
 * Doing a `diff` on ipynb-formatted files makes it difficult for the

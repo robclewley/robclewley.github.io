@@ -11,7 +11,7 @@ references:
 _Today's post is the second that is guest-contributed by my [Google Summer of Code](http://incf.org/gsoc/2015) student,
 Alex Kuefler. He has just finished his project on further developing Fovea, the tool for
 [interactively investigating and analyzing complex data and models](http://www.google-melange.com/gsoc/project/details/google/gsoc2015/akuefler/5668600916475904).
-The [previous post](http://robclewley.github.io/pca_demo_with_fovea/) described setting up Fovea and using it to investigate a PCA of multielectrode spike data._
+The [previous post]({% post_url 2015-06-29-pca_demo_with_fovea %}) described setting up Fovea and using it to investigate a PCA of multielectrode spike data._
 
 _As usual, and the latest version of the project source code, including the code for this post's example, can be
 found on [github](https://github.com/robclewley/fovea)._
@@ -37,12 +37,15 @@ found on [github](https://github.com/robclewley/fovea)._
 {% assign ref=page.references %}
 
 <a name="head1"></a>
+
 ##Introduction
 
 In my previous post, I explored how Fovea can elucidate the process of picking the best number of dimensions to express multivariate data. As a corollary, I provided a bit of information about Principal Component Analysis (PCA) and showed off the geometry of this projection-based dimensionality reduction method. With these basics in place, we can turn to a fun application of PCA (and visual diagnostics) to a real problem in neuroscience. Namely, how do we determine which brain cells emit which spikes if we record a sample containing different signals?
 
 <a name="head2"></a>
+
 ##Background
+
 A multi-electrode array is a tiny bed of pin-like sensors driven into the soft jelly of the brain. Each pin (electrode) records electrical changes near individual neurons as a numerical value that dips and spikes as the cell hyper- and de-polarizes. Given that the array can contain tens or hundreds of electrodes, multi-electrode arrays collect matrix data describing voltage at many different points.
 
 Such direct recording of many cells is sometimes likened to lowering a series of microphones into a stadium during a sports game. Whereas low-resolution brain scans (e.g., fMRI, EEG) record the roar of the entire crowd, multi-electrode arrays pick out the voices of individual neurons. But even though we can aim our recorders at individuals, we’re still bound to pick up surrounding speakers. Neuroscientists run into a problem identifying Alice the neuron, when Bob and Carol are shouting nearby.
@@ -61,7 +64,9 @@ After detecting all the action potentials and building a profile of each one’s
 Experts have a wealth of filters, classifiers, and numerical techniques for crunching through each step of a spike sort. But I’m not an expert. I like to gain insight about scary algorithms by fiddling with their knobs and seeing what happens. Fortunately, spike sorting can be visualized vividly at every step and Fovea provides the tools to do it.
 
 <a name="head3"></a>
+
 ##Setting Up Fovea
+
 The previous post walks through some commands for filling layers with data and slapping them over GUI subplots. The pca_disc.py code there described is an example of working with the vanilla diagnosticGUI (a global, singleton instance simply imported from graphics.py), but for a more complicate spike-sorting program, we’ll want a more personalized GUI.
 
 Fovea now supports the option of initializing a new diagnosticGUIs to be subclassed by a user’s objects. 
@@ -86,7 +91,9 @@ Where the y-axis represents voltage, and the x-axis is time.
 Looking at this plot, we want to determine which peaks came from Alice, which came from Bob, and which are Multi-Unit Activity from the electrode’s periphery, all while barring noise from further consideration.
 
 <a name="head4"></a>
+
 ##Spike Detection
+
 Finding true positives means admitting false positives. Such is life. When setting a threshold (i.e., the minimum acceptable height for a peak in the waveform to be considered an action potential) we invariably exclude some interesting spikes from our analysis. Or we error in the opposite direction and admit noise that’s tall enough to ride. Spike detection is a recurring theme of the last blogpost: data analysis is replete will subjective judgments, but visual diagnostics can help inform us before we make decisions.
 Using Fovea’s new callbacks, we can create a threshold line to be translated up and down the waveform, admitting (or dismissing) candidate spikes as it moves along. Pressing “l” will activate line creation mode, at which point, a _line\_GUI_ object can be drawn on the axes by clicking and dragging. Once created, we can produce a perfectly horizontal threshold that extends the breadth of the data by pressing “m”.
 
@@ -188,6 +195,7 @@ Each _box\_GUI_ captures 64 milliseconds of neural data by default, but this val
 The boxes’ contents are shown in the second (“detected spikes”) subplot, as a succession of spike profiles laid on top of each other. This plot will give you a general sense of the action potentials’ shapes (and their diversity), but it’s not yet clear how to sort them.  
 
 <a name="head5"></a>
+
 ##Feature Extraction
 
 Any given object of study can be decomposed into features in an infinite number of ways. A birdwatcher confronting a strange specimen can consider anything from the animal’s tail-plumage, to its birdsong, to the motion of its flight in order to identify it. There is no single “right” feature or set of features to look at, because the bird is a whole of many parts. Nevertheless, selecting some attributes over others and describing experimental objects as vectors across these attributes can be very useful. This process, called _features extraction_, discretizes nature and helps us make decisions in the face of ambiguity.
@@ -215,7 +223,9 @@ You may also notice that only the first and second PCs are fully drawn in, where
 ![Comparing second and third PC scores](https://github.com/akuefler/akuefler.github.io/blob/master/images/spikesort_images/second_and_third_PC.png?raw=true)
 
 <a name="head6"></a>
+
 ##Classification
+
 Two differences should stand out when projecting onto the first/second PCs rather than the second/third PCs. First, the data projected onto the first/second PCs should have a greater tendency to cluster.
 
 ![The projected spikes subplot for first/second and third/second projections](https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/compare_fourth_subplots.png?raw=true)
@@ -235,11 +245,13 @@ My placement of rectangular bounding boxes using Fovea's "b" command in this pro
 Although the literature on classification algorithms is extensive, the fact that we can turn the different “knobs” provided by Fovea and come up with unexpected results suggests the benefits of visualization for exploratory analysis.
 
 <a name="head7"></a>
+
 ##Conclusion
 
 In addition to exploring a real-world use case, this post lays out lots of new Fovea tools resulting from our work during Google Summer of Code 2015. We’ve seen how subclassing diagnosticGUI can produce more complicated programs and let us tailor Fovea’s behavior with user function overrides. We also took a look at built-in key presses, picking selected objects with the mouse-clicks, and some applications for the _line\_GUI_ and _box\_GUI_ context objects.
 
 <a name="head8"></a>
+
 ##Links
 
 [Realistic simulation of extracellular recordings](https://www.cs.princeton.edu/picasso/mats/PCA-Tutorial-Intuition_jp.pdf) 

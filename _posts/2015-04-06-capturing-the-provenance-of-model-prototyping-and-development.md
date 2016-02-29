@@ -58,6 +58,7 @@ executable and already version controlled for posterity as a GitHub
 'gist'.
 
 <a name="head1"></a>
+
 ## Dependencies
 
 I have to assume you know something about applied math, differential
@@ -104,6 +105,7 @@ obviously want to have Git locally installed, and a GitHub account as
 an online repository.
 
 <a name="head2"></a>
+
 ## Viewing and understanding the example
 
 Ideally, the gist would be presented online in a convenient fashion
@@ -138,6 +140,7 @@ These already reflect a few commits, partly to assist in creating backups in
 case I messed something up. (See later.)
 
 <a name="head3"></a>
+
 ## The math modeling problem
 
 Suppose we are given experimental details of an unknown Black Box
@@ -201,6 +204,7 @@ These seem to be the minimal, necessary elements to make a modeling
 problem well posed.
 
 <a name="head3_1"></a>
+
 ### Implementation
 
 For the sake of an easy example, I reused code for the classic
@@ -244,6 +248,7 @@ integrated trajectory that starts from the center of the domain, with
 the individual sample points shown as black dots.
 
 <a name="head4"></a>
+
 ## Other project preparations
 
 At this point, it was time to initialize a new Wing IDE python
@@ -252,10 +257,12 @@ it. I then configured the Git integration tool within Wing and
 synchronized all the files between the local folder and GitHub.
 
 <a name="head5"></a>
+
 ## Steps towards a goal: a workflow of test-driven development
 
 
 <a name="head5_1"></a>
+
 ### The 'StudyContext'
 
 For want of a better name (I've considered several), a
@@ -275,6 +282,7 @@ recommended. A set of unresolved SCs become the project's 'backlog' of
 work to be allocated to investigators!
 
 <a name="head5_2"></a>
+
 ### Flexible workflow
 
 Since, by the nature of early model development, a lot is unknown, it
@@ -287,6 +295,7 @@ development work is done. But the existence of the test is an
 objective goal to define the UAC of the SC.
 
 <a name="head5_3"></a>
+
 ### Open ontology
 
 By the same token, it also makes sense not to limit the user to a
@@ -343,6 +352,7 @@ lay down declarations of Steps that we will take to achieve the goal,
 and write more code to fill in the blocks we need.
 
 <a name="head5_4"></a>
+
 ### Example Step types
 
 Types of 'Step' are entirely user-defined, depending on
@@ -365,6 +375,7 @@ parent. Again, management software should assist in tracking and
 validating such links. For now, we'll enforce it as a convention.
 
 <a name="head5_5"></a>
+
 ### StudyContext object declaration syntax
 
 As there is no actual project management program visiting and parsing
@@ -396,6 +407,7 @@ studycontext-step:
 
 
 <a name="head5_6"></a>
+
 ### Commit the project when you'd commit code
 
 As in a software development project, I committed the project code
@@ -430,6 +442,7 @@ git diff b854606 2215d75
 
 
 <a name="head5_7"></a>
+
 ### Bifurcate the StudyContext when it gets large or complex
 
 During rapid prototyping, I want to use meaningful script file names
@@ -470,6 +483,7 @@ those Steps in the past, but the revision history (and branch tags,
 for instance) at least retains their provenance.
 
 <a name="head6"></a>
+
 ## Summary so far
 
 We are nearly half-way done, but we haven't even tackled the

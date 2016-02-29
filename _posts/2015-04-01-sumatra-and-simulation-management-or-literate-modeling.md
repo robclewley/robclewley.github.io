@@ -51,6 +51,7 @@ they are absolutely not). But I will have to come back to this in a
 later post.
 
 <a name="head1"></a>
+
 ## When does prototyping end and simulation begin? 
 
 I want to piggyback on the comments that Daniel made about a coming
@@ -88,6 +89,7 @@ late* to envision making progress in informatics for scientific
 modeling. Let's not be that straw man....
 
 <a name="head2"></a>
+
 ## Where *is* the harm? 
 
 An executable model already embodies so much provenance about the core
@@ -116,6 +118,7 @@ should involve similar informatic workflows that
 science.
 
 <a name="head3"></a>
+
 ##  A liberating development cycle picture
 
 I personally prefer an ["Agile"]({{ref['agile']}})-like model of the
@@ -150,6 +153,7 @@ harmful. The practicality of a possible solution should not be the
 reason that we dismiss the existence of the problem in the first place.
 
 <a name="head4"></a>
+
 ## Literate modeling introduced
 
 At this point, you might think my idea is worthy, but the implementation still
@@ -179,6 +183,7 @@ of workflow that might look like, then you can imagine that many
 scientistis would see that as impossibly burdensome.
 
 <a name="head5"></a>
+
 ## I'll take a blog for starters
 
 Before we explore what cool, sophisticated things literate modeling
@@ -191,6 +196,7 @@ diagram to refer to a social and cognitive step of digital sharing and
 discussion at the end of a mini-cycle.
 
 <a name="head6"></a>
+
 ## Reflection
 
 So, a more generous re-interpretation of the diagram I re-posted here is to
@@ -210,6 +216,7 @@ up the chain as needed, I could get behind this diagram.
 <p><span style="display:none">claimtoken-551c2a303b3e8</span></p>
 
 <a name="head7"></a>
+
 ## Footnotes
 
 [^1]: I think we avoid a more complex picture of the cycle because we fear over-complicating the essential, and idealized flow of progress through the process.

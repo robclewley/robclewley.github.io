@@ -98,6 +98,7 @@ won't be presenting this work in the form of my [literate modeling
 workflow](http://robclewley.github.io/capturing-the-provenance-of-model-prototyping-and-development/).
 
 <a name="head1"></a>
+
 ## The need for better diagnostics with complex algorithms
 
 Let's say you write an algorithm, or you are asked to apply an
@@ -169,6 +170,7 @@ modeling principles could also lead to a clearer understanding of the
 convoluted assumptions when dealing with nested algorithms.
 
 <a name="head2"></a>
+
 ## Pre-requisites for this demo
 
 ### Code dependencies
@@ -242,6 +244,7 @@ this should not be a difficult assumption to satisfy.
 --------
 
 <a name="head3"></a>
+
 ## Demonstration examples
 
 I am using my fork of a
@@ -797,6 +800,7 @@ function as `filter_log`.
 ------------
 
 <a name="head4"></a>
+
 ## Discussion
 
 ### Overhead
@@ -859,6 +863,7 @@ see the added value in either developing or presenting this demo as a
 notebook. Please feel free to enlighten me further if you disagree.
 
 <a name="head5"></a>
+
 ## Next installment with Fovea
 
 Next time we look at Fovea, we'll diagnose a much more sophisticated

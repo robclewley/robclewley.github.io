@@ -34,14 +34,16 @@ references:
 
 This is Part 2 of my posts about capturing the provenance of model
 prototyping and
-development. [Part 1 is here](http://robclewley.github.io/capturing-the-provenance-of-model-prototyping-and-development).
+development. [Part 1 is here]({% post_url 2015-04-06-capturing-the-provenance-of-model-prototyping-and-development %}).
 
 ----
 
 <a name="head1"></a>
+
 ## Steps towards the goal, continued
 
 <a name="head1_1"></a>
+
 ### Breaking into Terminal Steps
 
 At this point, we switch to the
@@ -131,6 +133,7 @@ metric *d(x,y)*, which is implemented as `common.py/metric(x,y)`. The
 blob size is proportional to the error magnitude.
 
 <a name="head1_2"></a>
+
 ### When Steps need to be decomposed further
 
 The tasks in scope of a StudyContext and its respective input and
@@ -149,9 +152,11 @@ user-enforced rule can work for small sized projects. This idea is not
 demonstrated here: I will exemplify it in a future post.
 
 <a name="head2"></a>
+
 ## Completing the model development
 
 <a name="head2_1"></a>
+
 ### Recap of the linear model
 
 A 2D linear model requires 6 parameters to specify it. In simplest
@@ -175,6 +180,7 @@ This ODE system is implemented in the project as the `PyDSTool.Model`
 object `lin`.
 
 <a name="head2_2"></a>
+
 ### Major repository changes
 
 We can now switch to
@@ -215,6 +221,7 @@ We now have this file system tree [^2]:
 optimization process.
 
 <a name="head2_3"></a>
+
 ### Optimization step
 
 In order that each script does just one task, some data must be
@@ -268,6 +275,7 @@ choices, you might like to markup a discussion of what you did and
 share your provenance record with others to help educate them.
 
 <a name="head2_4"></a>
+
 ### Visualizations of the results
 
 In Stage 2, we observed that the default state of the linear system's
@@ -297,6 +305,7 @@ in the SC comment metadata.
 We have not addressed the original UAC, which is to ensure that *trajectories* computed from LF do not diverge more than *L2_tol* from those from F, but we will see that it's not even necessary to assess that to make a conclusion.
 
 <a name="head3"></a>
+
 ## Conclusions and discussion
 
 Based on the original error tolerance requested (*L2_tol* = 0.002),
@@ -341,6 +350,7 @@ initiates some discussion and maybe even a contribution to creating a
 python platform for supporting literate modeling of this kind.
 
 <a name="head3_1"></a>
+
 ### Summary
 
 These two posts have been an almost stream-of-consciousness look at a
@@ -374,6 +384,7 @@ Note that we could apply this provenance methodology to other forms of
 mathematical or computational work, including data analysis.
 
 <a name="head3_2"></a>
+
 ### Limitations of the implementation
 
 Several limitations and problems that I encountered are recorded as
@@ -418,6 +429,7 @@ complete. The code may still need to be tidied up before committing
 and publishing.
 
 <a name="head3_3"></a>
+
 ### Weaving a tangled web of unreadability
 
 Finally, as Tony Fast pointed out in our discussion, python code files
@@ -498,6 +510,7 @@ matures ([this one](https://github.com/mleonard87/watson-python) is
 not there yet), I'd consider basing my project manager on this code.
 
 <a name="head3_4"></a>
+
 ### iPython notebooks to the rescue?
 
 However, iPython notebooks, as I currently appreciate them, are also
@@ -527,6 +540,7 @@ tools more in future posts, and I learn more about the notebooks, my
 arguments will hopefully become clearer one way or another.
 
 <a name="head3_5"></a>
+
 ### Version control issues
 
 In terms of version control, the gist system is not sophisticated
@@ -540,6 +554,7 @@ manager would have to wrap all the git operations and UI into a
 customized interface.
 
 <a name="head3_6"></a>
+
 ### Further work
 
 Merging and combining results and artifacts of sub-SCs that resolve
@@ -550,6 +565,7 @@ artifacts can be tagged by their original SC file and then merged into
 the parent's common library for continued use in the parent SC.
 
 <a name="head4"></a>
+
 ### Footnotes
 
 [^1]: We won't bother to record the structure of the study contexts in a metadata file in this example, but a real project management system would be keeping track of the change from a single `studycontext1.py` to the folder `studycontext1/` and a database of all project SCs.
