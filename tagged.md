@@ -4,6 +4,7 @@ title: Blog Posts by Tag
 ---
 
 <div>
+
 {% for tag in site.data.tags %}
    <h3>{{ tag.name }}</h3>
    <ul>

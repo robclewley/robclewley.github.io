@@ -10,8 +10,7 @@ references:
 
 In 2011, I proudly developed and taught a new graduate course at
 Georgia State University named
-["Introduction to Modeling for the Life Sciences"]
-(http://www.ni.gsu.edu/~rclewley/Teaching/IntroToModeling/NEUR8390.html). I took a bunch of students from six
+["Introduction to Modeling for the Life Sciences"](http://www.ni.gsu.edu/~rclewley/Teaching/IntroToModeling/NEUR8390.html). I took a bunch of students from six
 different academic departments and threw them into the deep end of studying the
 application of mathematical modeling in the life sciences. And I don't mean the typical
 basic stuff you usually show newbies like elementary statistics,

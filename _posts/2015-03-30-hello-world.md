@@ -3,7 +3,7 @@ layout: post
 title: "Hello World"
 comments: true
 tags: [literate-modeling, reverse-engineering, test-driven-modeling, metamodeling, discussion]
-redirect_from: "/2015/03/30/hello-world"
+redirect_from: ""
 permalink: /2015/03/30/hello-world
 references:
   dst: http://en.wikipedia.org/wiki/Dynamical_systems_theory
@@ -43,8 +43,7 @@ systems. IMHO.
 Essentially, all reputable, publishable science now being done is
 touched upon by some aspect of computational or data science. In turn,
 this means that statistics and, increasingly, applied mathematics
-areas such as
-[dynamical systems modeling]({{ref['dst']}}),
+areas such as [dynamical systems modeling]({{ref['dst']}}),
 are important fields that contribute directly to the progress of
 scientific research through their ability to formally analyze and
 predict patterns in data using *data-driven models*.
@@ -71,13 +70,8 @@ capabilities for academic scientists, students,
 ## The shape of things to come
 
 As a teaser for what lies ahead, my focus right now is on translating
-the CS, engineering, and process management concepts known as
-["literate programming,"]({{ref['literate_programming']}})
-["metamodeling,"]({{ref['metamodeling']}})
-["test-driven development,"]({{ref['test_driven_dev']}})
-and
-["reverse engineering"]({{ref['reverse_engineering']}})
-over to the domain of mathematical modeling and computational
+the CS, engineering, and process management concepts known as ["literate programming,"]({{ref['literate_programming']}}) ["metamodeling,"]({{ref['metamodeling']}}) ["test-driven development,"]({{ref['test_driven_dev']}})
+and ["reverse engineering"]({{ref['reverse_engineering']}}) over to the domain of mathematical modeling and computational
 science.
 
 By this, I mean applying these concepts *not* to the software used for
