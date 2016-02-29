@@ -2,7 +2,7 @@
 layout: post
 title: "Presenting complex math models to a general audience"
 comments: true
-tags: [education, discussion]
+tags: ['education', 'discussion']
 redirect_from: ""
 permalink: /2016/02/28/presenting-complex-math-models-to-a-general-audience
 references:
