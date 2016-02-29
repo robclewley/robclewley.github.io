@@ -1,7 +1,7 @@
 timezone: America/New_York
 
 # Dependencies
-markdown:         kramdown
+markdown:         redcarpet
 redcarpet:
   extensions: ["tables", "footnotes"]
 
