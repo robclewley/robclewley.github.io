@@ -72,14 +72,12 @@ it's a good example of using a mixture of diagrams, math, and prose
 to explain the technical basis of the work as well provide adequate
 context to the assumptions and literature surrounding it.
 
-![Page1](../../assets/obesity/ChowHandout1.jpg)
-![Page1](../../assets/obesity/ChowHandout2.jpg)
-![Page3](../../assets/obesity/ChowHandout3.jpg)
-![Page4](../../assets/obesity/ChowHandout4.jpg)
+![Page1](http://github.com/robclewley/robclewley.github.io/blob/master/assets/obesity/ChowHandout1.jpg?raw=true)
+![Page1](http://github.com/robclewley/robclewley.github.io/blob/master/assets/obesity/ChowHandout2.jpg?raw=true)
+![Page3](http://github.com/robclewley/robclewley.github.io/blob/master/assets/obesity/ChowHandout3.jpg?raw=true)
+![Page4](http://github.com/robclewley/robclewley.github.io/blob/master/assets/obesity/ChowHandout4.jpg?raw=true)
 
-([Link to the original, high-resolution PDF.](../../assets/obesity/ChowHandout.pdf))
-
-<!-- ((https://github.com/robclewley/robclewley.github.io/blob/master/assets/obesity/ChowHandout.pdf)) -->
+([Link to the original, high-resolution PDF.](http://github.com/robclewley/robclewley.github.io/blob/master/assets/obesity/ChowHandout.pdf?raw=true))
 
 I'll let the value of the handout speak for itself. I think the students did a
 great job in expressing complex ideas without dumbing them down by
