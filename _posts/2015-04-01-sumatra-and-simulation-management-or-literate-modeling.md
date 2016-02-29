@@ -4,7 +4,7 @@ title: "Sumatra and simulation management, or literate modeling?"
 comments: true
 tags: [literate-modeling, test-driven-modeling, discussion]
 redirect_from: ""
-permalink: sumatra-and-simulation-management-or-literate-modeling
+permalink: /2015/04/01/sumatra-and-simulation-management-or-literate-modeling
 references:
   sumatra: http://neuralensemble.org/sumatra/
   wheeler_post: http://wd15.github.io/2014/06/25/automated-simulation-management/

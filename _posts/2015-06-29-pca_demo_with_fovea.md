@@ -4,7 +4,7 @@ title: "PCA demo with Fovea"
 comments: true
 tags: ['technical', 'python', 'education']
 redirect_from: ""
-permalink: pca_demo_with_fovea
+permalink: /2015/06/29/pca_demo_with_fovea
 references:
 ---
 

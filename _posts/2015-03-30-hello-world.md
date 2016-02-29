@@ -4,7 +4,7 @@ title: "Hello World"
 comments: true
 tags: [literate-modeling, reverse-engineering, test-driven-modeling, metamodeling, discussion]
 redirect_from: "/2015/03/30/hello-world"
-permalink: hello-world
+permalink: /2015/03/30/hello-world
 references:
   dst: http://en.wikipedia.org/wiki/Dynamical_systems_theory
   citizen_science: http://en.wikipedia.org/wiki/Citizen_science

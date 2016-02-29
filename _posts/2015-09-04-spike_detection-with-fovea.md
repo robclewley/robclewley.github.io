@@ -4,7 +4,7 @@ title: "Spike Detection and Feature Classification with Fovea"
 comments: true
 tags: ['technical', 'python', 'education']
 redirect_from: ""
-permalink: spike_detection_with_fovea
+permalink: /2015/09/04/spike_detection_with_fovea
 references:
 ---
 

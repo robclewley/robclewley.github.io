@@ -4,7 +4,7 @@ title: "Logging and diagnostic tools for numeric python algorithms"
 comments: true
 tags: ['technical', 'literate-modeling', 'education']
 redirect_from: ""
-permalink: logging-and-diagnostic-tools-for-numeric-python-algorithms
+permalink: /2015/05/06/logging-and-diagnostic-tools-for-numeric-python-algorithms
 references:
 ---
 

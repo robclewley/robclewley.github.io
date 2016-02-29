@@ -4,7 +4,7 @@ title: "ipython notebooks for literate modeling"
 comments: true
 tags: ['technical', 'python', 'web-technology']
 redirect_from: ""
-permalink: ipython-notebooks-for-literate-modeling
+permalink: /2015/04/18/ipython-notebooks-for-literate-modeling
 references:
 ---
 

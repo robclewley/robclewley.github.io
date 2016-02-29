@@ -4,7 +4,7 @@ title: "Capturing the provenance of model prototyping and development"
 comments: true
 tags: [technical, test-driven-modeling, literate-modeling, python]
 redirect_from: ""
-permalink: capturing-the-provenance-of-model-prototyping-and-development
+permalink: /2015/04/06/capturing-the-provenance-of-model-prototyping-and-development
 references:
 ---
 
