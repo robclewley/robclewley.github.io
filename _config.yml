@@ -1,11 +1,14 @@
 timezone: America/New_York
 
 # Dependencies
-markdown:         redcarpet
-redcarpet:
-  extensions: ["tables", "footnotes"]
+kramdown:
+	input: GFM
+	syntax_highlighter: rouge 
+#markdown:         redcarpet
+#redcarpet:
+#  extensions: ["tables", "footnotes"]
 
-highlighter:         rouge
+#highlighter:         pygments
 
 # Permalinks
 permalink:        pretty
@@ -42,3 +45,5 @@ pages_list:
 #  * https://help.github.com/articles/redirects-on-github-pages
 gems:
   - jekyll-redirect-from
+  - jekyll-paginate
+  - jekyll-gist
