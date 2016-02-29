@@ -8,7 +8,7 @@ kramdown:
 #redcarpet:
 #  extensions: ["tables", "footnotes"]
 
-#highlighter:         pygments
+#highlighter:     pygments
 
 # Permalinks
 permalink:        pretty
