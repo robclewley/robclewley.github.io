@@ -2,8 +2,8 @@ timezone: America/New_York
 
 # Dependencies
 kramdown:
-	input: GFM
-	syntax_highlighter: rouge 
+  input: GFM
+  syntax_highlighter: rouge 
 #markdown:         redcarpet
 #redcarpet:
 #  extensions: ["tables", "footnotes"]
