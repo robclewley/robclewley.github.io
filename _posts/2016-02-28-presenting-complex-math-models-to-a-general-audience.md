@@ -8,14 +8,7 @@ permalink: /2016/02/28/presenting-complex-math-models-to-a-general-audience
 references:
 ---
 
-In 2011, I proudly developed and taught a new graduate course at
-Georgia State University named
-["Introduction to Modeling for the Life Sciences"](http://www.ni.gsu.edu/~rclewley/Teaching/IntroToModeling/NEUR8390.html). I took a bunch of students from six
-different academic departments and threw them into the deep end of studying the
-application of mathematical modeling in the life sciences. And I don't mean the typical
-basic stuff you usually show newbies like elementary statistics,
-linear regression models, or remedial calculus. I wanted to discuss big
-questions such as:
+In 2011, I proudly developed and taught a new graduate course at Georgia State University named ["Introduction to Modeling for the Life Sciences"](http://www.ni.gsu.edu/~rclewley/Teaching/IntroToModeling/NEUR8390.html). I took a bunch of students from six different academic departments and threw them into the deep end of studying the application of mathematical modeling in the life sciences. And I don't mean the typical basic stuff you usually show newbies like elementary statistics, linear regression models, or remedial calculus. I wanted to discuss big questions such as:
 
 * How can a non-mathematican tell a possibly good model from a bad one?
 * How can a mathematician make sure they are building a reasonable
@@ -24,12 +17,9 @@ questions such as:
 More specific questions we dug into were:
 
 * How can we assess the modeling methods of the [Blue Brain Project](http://bluebrain.epfl.ch/)?
-* What kinds of models of the brain can there even be? And why are there
-  so many?
+* What kinds of models of the brain can there even be? And why are there so many?
 
-In reference to my promotional materials to attract students to my
-intimidating-looking course description and [reading list](http://www2.gsu.edu/~matrhc/NEUR8790-papers.html), we also considered more
-cryptic questions such as:
+In reference to my promotional materials to attract students to my intimidating-looking course description and [reading list](http://www2.gsu.edu/~matrhc/NEUR8790-papers.html), we also considered more cryptic questions such as:
 
 *What is the connection between (a) the
 ability of an F-16 fighter jet to maneuver much more nimbly than an
@@ -51,18 +41,9 @@ achievement: a collaboratively-written document produced by the
 students, with my help, that summarized their high-level understanding
 of a pretty complex mathematical model. 
 
-My students spent about three weeks dissecting Carson's [influential 2008
-paper](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2266991/) with Kevin Hall,
-which uses principles of qualitative dynamical
-systems in the form of analysis of fixed point stability and
-phase-plane diagrams. Nonetheless, the assumptions and derivation of
-the differential equations is, of course, not at all trivial. I invite
-you to take a look first -- it's open access.
+My students spent about three weeks dissecting Carson's [influential 2008 paper](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2266991/) with Kevin Hall, which uses principles of qualitative dynamical systems in the form of analysis of fixed point stability and phase-plane diagrams. Nonetheless, the assumptions and derivation of the differential equations is, of course, not at all trivial. I invite you to take a look first -- it's open access.
 
-The document produced by my students was used as a handout to
-accompany a public lecture given my friend and colleague, [Carson Chow](http://sciencehouse.wordpress.com),
-visiting from [NIH](http://irp.nih.gov/pi/carson-chow). I'd invited
-him to speak at GSU on "The Dynamics of Obesity".
+The document produced by my students was used as a handout to accompany a public lecture given my friend and colleague, [Carson Chow](http://sciencehouse.wordpress.com), visiting from [NIH](http://irp.nih.gov/pi/carson-chow). I'd invited him to speak at GSU on "The Dynamics of Obesity".
 
 I thought I'd share this handout with you by embedding the pages here.
 Now that I'm expending more effort at the interface of technical and
