@@ -37,7 +37,7 @@ found on [github](https://github.com/robclewley/fovea)_
 
 <a name="head1"></a>
 
-##Introduction
+## Introduction
 
 If you’ve worked with data, you’ve probably heard of principal component analysis. PCA is one of the most widely used techniques for pre-processing high dimensional data, but for the mathematically illiterate, it can be something of a black box. This tutorial won’t show you the algebra going on inside (for that, I highly recommend this [tutorial by Jon Shlens](https://www.cs.princeton.edu/picasso/mats/PCA-Tutorial-Intuition_jp.pdf)), but it will build up some geometric intuitions about what PCA is doing and demonstrate how Fovea can be used to gain such insights.
 
@@ -106,7 +106,7 @@ In _pca\_disc_, it is apparent that the two measly a and b axes can capture the 
 
 <a name="head2"></a>
 
-##Setting Up Fovea
+## Setting Up Fovea
 
 Our goal is to set up some nice images showing the “before and after” of a dimensionality reduction as subplots in a figure window. But first we need to decide what kinds of information we want populating our subplots. For the purposes of this tutorial, the layers will correspond to different rotations of our disc and contain four different, but associated, groups of data (before-PCA data, after-PCA data, variance captured by PCA, and the PC’s themselves). Out in the wild, the user may want to reserve each layer for different clusters of a single dataset or different datasets entirely (the possibilities are endless). We can set aside some names and appropriate colors for our layers in a couple lists:
 
@@ -157,13 +157,13 @@ As we move to more complicated data sets, it will also be important to assess ho
 Looping through our list of layers, we can now perform PCA on each rotated dataset using _pca/_disc_’s _compute()_ function. _compute()_ makes use of _doPCA()_ – an aptly named function for doing PCA – included in PyDSTool’s data analysis toolbox (imported as ‘da’). You may also wish to create a pcaNode object directly with the python MDP package (which da imports). MDP includes a method for retrieving the data’s projection matrix, whose columns are the principal components we’re after. Another handy method defined for pcaNodes is simply named “_d()_”, which returns the list of eigenvalues corresponding to the principal components (which we can use to account for how much variance each new dimension explains).
 
 ```python
-#Create a pcaNode object.
+# Create a pcaNode object.
 p = da.doPCA(X, len(X[0]), len(X[0]))
 
-#Columns of the projection matrix are the PCs.
+# Columns of the projection matrix are the PCs.
 pcMat = p.get_projmatrix()
 
-#Store column vectors to be convenient for plotting as line endpoints.
+# Store column vectors to be convenient for plotting as line endpoints.
 pcPts = np.concatenate(([pcMat.transpose()[0,:]*15],  
     [-pcMat.transpose()[0,:]*15]), axis=0)
 
@@ -171,27 +171,30 @@ for j in range(1, new_dim):
     pcPts = np.concatenate((pcPts, [pcMat.transpose()[j,:]*15],  
         [-pcMat.transpose()[j,:]*15]), axis=0)
 
-#Get data projected onto the 'new_dim' number of PCs.
+# Get data projected onto the 'new_dim' number of PCs.
+
 Y = p._execute(X, new_dim)
+
 ```
 
 _compute()_ then adds the data (both low and high dimensional), the PC’s, and a plot of variances to their respective layers, and makes use of the optional “subplot” parameter to ensure each group of data ends up on the axes assigned to it.
 
 ```python
-#Create plot of high-dimensional data.
+
+# Create plot of high-dimensional data.
 plotter.addData([X[:,0], X[:,1], X[:,2]], layer=layer, style=style+'.', subplot='11')
 
-#Add PC lines to the same subplot as the high-dimensional data.
+# Add PC lines to the same subplot as the high-dimensional data.
 for j in range(0, len(pcPts), 2):
     plotter.addData([pcPts[j+0:j+2,0], pcPts[j+0:j+2,1], pcPts[j+0:j+2,2]],  
         layer= layer, style= style, subplot= '11')
     plotter.addData([pcPts[j+2:j+4,0], pcPts[j+2:j+4,1], pcPts[j+2:j+4,2]],  
         layer= layer, style= style, subplot= '11')
 
-#Create plot of low-dimensional data.
+# Create plot of low-dimensional data.
 plotter.addData([Y[:,0], Y[:,1]], layer=layer, style=style+'.', subplot= '12')
 
-#Create line plot for fraction of variance explained by each component.
+# Create line plot for fraction of variance explained by each component.
 plotter.addData([range(1, len(p.d)+1), p.d/sum(p.d)], layer=layer, style=style+"-o", subplot= '13')
 
 ```
@@ -205,7 +208,7 @@ for layer in rot_layers:
 
 <a name="head3"></a>
 
-##Exploratory Analysis
+## Exploratory Analysis
 
 At this point, we can explore our data by clicking and rolling the 3D axes and changing the visibility of the various layers using _setLayer()_. But to make things more user-friendly, it is better to set up some callbacks. For now, this function will respond contextually by cycling through the different rotations when the arrow keys are pressed, hiding the original data when ‘h’ is pressed, and displaying all rotations in response to ‘m’. It can be easily connected to our GUI’s instance of masterWin with “mpl_connect”:
 
@@ -256,14 +259,16 @@ And third, the “variance by components” plot is very boring. Because we’re
 
 <a name="head4"></a>
 
-##High-Dimensional Data
+## High-Dimensional Data
 
 For most real-world datasets, dimensionality reduction involves sacrifice. Every principal component captures a bit of variance and somewhere along the line, the user must make a judgment call about how much of that variance it is okay to throw out if it means getting to weasel into a lower dimension. The subjectivity of this process is why visual diagnostics tools can play such an important role in dimensionality reduction. Good analyses rely on the ability of informaticians to make informed decisions and Fovea is a great informer. By interacting with data, testing different candidate dimensionalities, and observing the associated “variance payoffs”, users can make better choices for a dimensionality reduction.
 
 Consider how our workflow changes as we move into higher dimensions. Imagine you are a psychologist acutely interested in how frequently members of 3 different populations (children, adolescents, and adults) experience 6 different emotions (joy, sorrow, jealousy, malice, fear, and pride) throughout the day. For convenience, we’ll pretend also that each population’s data can be modeled perfectly as a normally-distributed hypersphere in 6D emotion-space. Now instead of having three rotations of a disc shown in three different colors, our dataset will consist of three distinct hyperspheres (created with _synthetic/_data()_) representing the emotional diversity of children (red), adolescents (green) and adults (blue):
 
 ```python
-#Create and stretch different hypersphere "clusters":
+
+# Create and stretch different hypersphere "clusters":
+
 X1 = translate(stretch(stretch(sd.generate_ball(133, dim, 10), 0, 1.4), 1, 1.4), 0, 25)
 X2 = translate(sd.generate_ball(110, dim, 10), 1, 20)
 X3 = translate(noise(sd.generate_ball(95, dim, 10), 2, 0.6, 0, 2), 2, 15)
@@ -353,7 +358,7 @@ The end result is a system that lets the user move “horizontally” through di
 
 <a name="head5"></a>
 
-##Adapting This Example To Your Application
+## Adapting This Example To Your Application
 
 As much as I hope you enjoyed this meditation on discs and hyperspheres, it is unlikely that you installed Fovea to process reams of conveniently-gaussian, made-up data. For that matter, it is unlikely you’ll be satisfied exploring whatever data you do have with PCA alone. So I’ll close out with a few comments about the overall design of the PCA visualization module and some simple ways you might repurpose it to meet your needs.
 
@@ -406,11 +411,11 @@ Even if you don’t care to manipulate your GUIs with fancy callbacks and widget
 
 <a name="head6"></a>
 
-##Conclusion
+## Conclusion
 
 Hopefully this walkthrough has given you a more visual understanding of PCA, but the moral of the story is that this framework is general-purpose and applicable to many data science tasks. Layers can be used to group related data and meta-data and make this information available in a number of formats. Setting up GUIs and callbacks is made easy, but advanced users retain the freedom to interact with their data through scripts and command line inputs. Fovea is an interactive, graphical toolkit, not simply a GUI. It gives would-be dimensionality reducers a view inside whatever black boxes interest them.
 
-##Links
+## Links
 
 [Remarkable tutorial on PCA](https://www.cs.princeton.edu/picasso/mats/PCA-Tutorial-Intuition_jp.pdf)  
 [DataHigh MATLAB package](http://users.ece.cmu.edu/~byronyu/software/DataHigh/datahigh.html)  

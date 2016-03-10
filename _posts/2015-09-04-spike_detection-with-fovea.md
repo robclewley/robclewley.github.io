@@ -92,7 +92,7 @@ Looking at this plot, we want to determine which peaks came from Alice, which ca
 
 <a name="head4"></a>
 
-##Spike Detection
+## Spike Detection
 
 Finding true positives means admitting false positives. Such is life. When setting a threshold (i.e., the minimum acceptable height for a peak in the waveform to be considered an action potential) we invariably exclude some interesting spikes from our analysis. Or we error in the opposite direction and admit noise that’s tall enough to ride. Spike detection is a recurring theme of the last blogpost: data analysis is replete will subjective judgments, but visual diagnostics can help inform us before we make decisions.
 Using Fovea’s new callbacks, we can create a threshold line to be translated up and down the waveform, admitting (or dismissing) candidate spikes as it moves along. Pressing “l” will activate line creation mode, at which point, a _line\_GUI_ object can be drawn on the axes by clicking and dragging. Once created, we can produce a perfectly horizontal threshold that extends the breadth of the data by pressing “m”.
@@ -196,7 +196,7 @@ The boxes’ contents are shown in the second (“detected spikes”) subplot, a
 
 <a name="head5"></a>
 
-##Feature Extraction
+## Feature Extraction
 
 Any given object of study can be decomposed into features in an infinite number of ways. A birdwatcher confronting a strange specimen can consider anything from the animal’s tail-plumage, to its birdsong, to the motion of its flight in order to identify it. There is no single “right” feature or set of features to look at, because the bird is a whole of many parts. Nevertheless, selecting some attributes over others and describing experimental objects as vectors across these attributes can be very useful. This process, called _features extraction_, discretizes nature and helps us make decisions in the face of ambiguity.
 
@@ -224,7 +224,7 @@ You may also notice that only the first and second PCs are fully drawn in, where
 
 <a name="head6"></a>
 
-##Classification
+## Classification
 
 Two differences should stand out when projecting onto the first/second PCs rather than the second/third PCs. First, the data projected onto the first/second PCs should have a greater tendency to cluster.
 
@@ -246,13 +246,13 @@ Although the literature on classification algorithms is extensive, the fact that
 
 <a name="head7"></a>
 
-##Conclusion
+## Conclusion
 
 In addition to exploring a real-world use case, this post lays out lots of new Fovea tools resulting from our work during Google Summer of Code 2015. We’ve seen how subclassing diagnosticGUI can produce more complicated programs and let us tailor Fovea’s behavior with user function overrides. We also took a look at built-in key presses, picking selected objects with the mouse-clicks, and some applications for the _line\_GUI_ and _box\_GUI_ context objects.
 
 <a name="head8"></a>
 
-##Links
+## Links
 
 [Realistic simulation of extracellular recordings](https://www.cs.princeton.edu/picasso/mats/PCA-Tutorial-Intuition_jp.pdf) 
 
