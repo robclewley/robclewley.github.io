@@ -86,7 +86,7 @@ motivate you to read further...
 <center>
 <img
 src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant1_fail1.gif?raw=true"
-alt="Resulting output frames directly converted to GIF" style="width: 250px;"/>
+alt="Resulting output frames directly converted to GIF" style="width: 500px;"/>
 </center>
 
 We have enough new ideas to cover here that, for the time being, I
@@ -246,7 +246,7 @@ from integer values:
 <center>
 <img
 src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/f1.gif?raw=true"
-alt="Function 1" style="width: 350px;"/>
+alt="Function 1" style="width: 450px;"/>
 </center>
 
 ### Function 2
@@ -268,7 +268,7 @@ our domain of interest:
 <center>
 <img
 src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/f2.gif?raw=true"
-alt="Function 2" style="width: 350px;"/>
+alt="Function 2" style="width: 450px;"/>
 </center>
 
 
@@ -645,7 +645,7 @@ We make the necessary fixes to the method's code, change the output
 directory again in the test script and re-run it. We find that it
 works this time:
 
-![Resulting output converted to GIF](../assets/secant1_success.gif)
+![Resulting output converted to GIF](../assets/secant1_success.gif?raw=true)
 
 
 ### Bisection with a poorly behaved function
@@ -682,10 +682,12 @@ neighborhood.
 
 <center>
 <img
-src="../assets/secant2_4.png" alt="n=4 secant2 success" style="width:
-300px;"/>
+src="(https://github.com/robclewley/robclewley.github.io/blob/master/assets/assets/secant2_4.png?raw=true"
+alt="n=4 secant2 success" style="width:500px;"/>
+
 <img
-src="../assets/secant2_5.png" alt="n=5 secant2 success" style="width: 300px;"/>
+src="(https://github.com/robclewley/robclewley.github.io/blob/master/assets/assets/secant2_5.png?raw=true"
+alt="n=5 secant2 success" style="width: 500px;"/>
 </center>
 
 We were lucky that the function continues to increase far from the
