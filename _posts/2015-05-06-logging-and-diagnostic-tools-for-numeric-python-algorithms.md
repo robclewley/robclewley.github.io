@@ -50,7 +50,7 @@ students, and I am continuing it now as part of my push for having
 effective tools for my research. In fact, I'm fortunate to have a [Google Summer of Code](http://www.google-melange.com/gsoc/project/details/google/gsoc2015/akuefler/5668600916475904) student working with me on this project right now.
 
 {: .center}
-![Fovea logo](https://github.com/robclewley/robclewley.github.io/blob/master/assets/fovea_logo-full.png "Fovea logo")
+![Fovea logo](https://github.com/robclewley/robclewley.github.io/blob/master/assets/fovea_logo-full.png?raw=true "Fovea logo")
 
 Fovea has a lot more to it, involving interactive graphical widgets
 for many analytical functions, including controlling parameters or
@@ -242,7 +242,7 @@ from integer values:
 
 <center>
 <img
-src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/f1.gif"
+src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/f1.gif?raw=true"
 alt="Function 1" style="width: 350px;"/>
 </center>
 
@@ -264,7 +264,7 @@ our domain of interest:
 
 <center>
 <img
-src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/f2.gif"
+src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/f2.gif?raw=true"
 alt="Function 2" style="width: 350px;"/>
 </center>
 
@@ -450,7 +450,7 @@ a long iteration. At this time, there can be no nested sub-layers.
 
 The various graphs output from our test script produced this GIF:
 
-![Resulting output converted to GIF](https://github.com/robclewley/robclewley.github.io/blob/master/assets/bisect1.gif)
+![Resulting output converted to GIF](https://github.com/robclewley/robclewley.github.io/blob/master/assets/bisect1.gif?raw=true)
 
 
 #### A look through the test script
@@ -571,9 +571,7 @@ all scenarios and catch these issues up front, which is the ideal way
 to proceed. But our logging approach is also effective at uncovering
 broken internal logic.
 
-So, I added an increment for `n`
-([line 154](http://github.com/robclewley/fovea/blob/blog_post/examples/root_finding/num_modded.py#L154))
-and tried again.
+So, I added an increment for `n` ([line 154](http://github.com/robclewley/fovea/blob/blog_post/examples/root_finding/num_modded.py#L154)) and tried again.
 
 #### Attempt 2: Second bug
 
@@ -581,7 +579,7 @@ This time, the graphic shows an initial state in which the interval
 contains a single root and the function is monotone. This should be a
 no-brainer for the algorithm to converge! However, it didn't.
 
-![Resulting output converted to GIF](https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant1_fail1.gif)
+![Resulting output converted to GIF](https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant1_fail1.gif?raw=true)
 
 We immediately see that the secant line created from `x0` and `x1` is
 crossing the *x*-axis in the first iteration but the crossing point is
@@ -604,7 +602,7 @@ running the test script again after changing the output directory's
 name. This time, the algorithm stops at the end of the first iteration
 with this picture.
 
-![Resulting output](https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant1_fail2.png)
+![Resulting output](https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant1_fail2.png?raw=true)
 
 Clearly, `x2` is not nearly close enough to the actual root for the
 tolerance to have been met as intended. The log reports:
@@ -654,7 +652,7 @@ zero crossings with the initial interval. It converges after 14
 iterations. Of course, we don't get to control *which* of the many
 zeros it converges to. Here is the output:
 
-![Resulting output converted to GIF](https://github.com/robclewley/robclewley.github.io/blob/master/assets/bisect2.gif)
+![Resulting output converted to GIF](https://github.com/robclewley/robclewley.github.io/blob/master/assets/bisect2.gif?raw=true)
 
 The test script is essentially identical to the previous ones.
 
@@ -666,7 +664,7 @@ after a temporary foray into much larger *x* values (at `n=5`) that give an
 impression that it's about to diverge. It converges after 12
 iterations, which is hardly better than bisection in this case.
 
-![Resulting output converted to GIF](https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant2_success.gif)
+![Resulting output converted to GIF](https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant2_success.gif?raw=true)
 
 You can imagine adding further
 diagnostics to uncover the origin of steps that go further from the
