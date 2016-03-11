@@ -44,17 +44,13 @@ references:
 
 
 In today's post we will give an overview of an early prototype of a
-new diagnostic tool for numeric algorithms, known as
-[Fovea](http://github.com/robclewley/fovea).
+new diagnostic tool for numeric algorithms, known as [Fovea](http://github.com/robclewley/fovea).
 I began creating this tool a couple of years ago with one of my graduate
 students, and I am continuing it now as part of my push for having
-effective tools for my research. In fact, I'm fortunate to have a
-[Google Summer of Code](http://www.google-melange.com/gsoc/project/details/google/gsoc2015/akuefler/5668600916475904)
-student working with me on this project right now.
+effective tools for my research. In fact, I'm fortunate to have a [Google Summer of Code](http://www.google-melange.com/gsoc/project/details/google/gsoc2015/akuefler/5668600916475904) student working with me on this project right now.
 
-<center>
-![Fovea logo](../assets/fovea_logo-full.png "Fovea logo")
-</center>
+{: .center}
+![Fovea logo](https://github.com/robclewley/robclewley.github.io/blob/master/assets/fovea_logo-full.png "Fovea logo")
 
 Fovea has a lot more to it, involving interactive graphical widgets
 for many analytical functions, including controlling parameters or
@@ -67,10 +63,7 @@ documentation that will be forthcoming during the GSoC project.
 As software developers and experimental scientists know, the first
 thing you have to do at the beginning of a new project is to spend a
 lot of time building (or buying) tools and instruments before you
-can execute the project itself. With the kinds of
-[exploratory computational science project](http://www.ni.gsu.edu/~rclewley/Research/index.html)
-that I undertake, I always find myself short of good diagnostics to
-guide my (or my students') progress towards a goal.
+can execute the project itself. With the kinds of [exploratory computational science project](http://www.ni.gsu.edu/~rclewley/Research/index.html) that I undertake, I always find myself short of good diagnostics to guide my (or my students') progress towards a goal.
 
 Because, as always, I will be introducing several new ideas here, we
 will keep today's examples elementary. Next time we look at these
@@ -89,7 +82,7 @@ motivate you to read further...
 
 <center>
 <img
-src="../assets/secant1_fail1.gif"
+src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant1_fail1.gif"
 alt="Resulting output frames directly converted to GIF" style="width: 250px;"/>
 </center>
 
@@ -125,15 +118,7 @@ order of magnitude improvement on understanding.
 When you're working on really hard problems involving strong
 nonlinearities, multiple scales, poor conditioning, noisy data, etc.,
 the algorithms you are interested in understanding can end up nested
-inside other algorithms. A simple example is a
-[predictor-corrector method](http://en.wikipedia.org/wiki/Predictor%E2%80%93corrector_method),
-used for many things but commonly found in
-[numerical continuation](http://en.wikipedia.org/wiki/Numerical_continuation)
-algorithms. Correction is often done using
-[Newton's Method](http://en.wikipedia.org/wiki/Newton%27s_method), but
-Newton's Method is a slippery thing to handle. If you aren't confident
-about certain properties of your starting situation, that
-method can rapidly diverge.
+inside other algorithms. A simple example is a [predictor-corrector method](http://en.wikipedia.org/wiki/Predictor%E2%80%93corrector_method), used for many things but commonly found in [numerical continuation](http://en.wikipedia.org/wiki/Numerical_continuation) algorithms. Correction is often done using [Newton's Method](http://en.wikipedia.org/wiki/Newton%27s_method), but Newton's Method is a slippery thing to handle. If you aren't confident about certain properties of your starting situation, that method can rapidly diverge.
 
 This example is already non-trivial to understand if you are new to
 high-level applied math, but it's just the beginning! As complex
@@ -175,15 +160,11 @@ convoluted assumptions when dealing with nested algorithms.
 
 ### Code dependencies
 
-Download [Fovea](http://github.com/robclewley/fovea/tree/blog_post)
-from github and install with the usual `python setup.py install`. This
-link is to a version tagged at the time of writing, to keep with the
-functionality exactly as presented here. You can, of course, also get
-the latest version and see what has progressed in the meantime.
+Download [Fovea](http://github.com/robclewley/fovea/tree/blog_post) from github and install with the usual `python setup.py install`. This link is to a version tagged at the time of writing, to keep with the functionality exactly as presented here. You can, of course, also get the latest version and see what has progressed in the meantime.
 
-**ADDENDUM 1: For Python 3.x users, I had to subsequently update the github repo, so checkout the latest one**
+**ADDENDUM 1: For Python 3.x users, I had to subsequently update the github repo, so checkout the latest one and install [pyeuclid](https://github.com/robclewley/pyeuclid) from my fork that updates for Python 3 compatibility.**
 
-**ADDENDUM 2: For Windows users, you may need to install pyeuclid from my github fork (covers some Python 3 compatibility not present in PyPI) and the [geos](http://trac.osgeo.org/geos/) dependency for the python shapely package. Binaries are available by independently installing shapely from [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely) or you can try to do it yourself using the appropriate version of [OSGeo4W](http://trac.osgeo.org/osgeo4w/).**
+**ADDENDUM 2: You may need to install [pyeuclid from my github fork](https://github.com/robclewley/pyeuclid) (covers some Python 3 compatibility not present in PyPI) and the [geos](http://trac.osgeo.org/geos/) dependency for the python shapely package. Binaries are available by independently installing shapely from [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely) or you can try to do it yourself using the appropriate version of [OSGeo4W](http://trac.osgeo.org/osgeo4w/).**
 
 At present, the package depends on `shapely`, `descartes`, `pyyaml`,
 `euclid`, [`PyDSTool`](http://github.com/robclewley/pydstool) (latest
@@ -202,24 +183,11 @@ before re-running my `setup.py` script.
 
 ### Knowledge dependencies
 
-You can read an introduction to
-[root finding on wikipedia](http://en.wikipedia.org/wiki/Root-finding_algorithm).
-I'm not going to introduce it here except to say that it is ubiquitous
-and highly relevant to science, engineering, or medical computation
-wherever you need to detect zero crossings in images, signals, or
-curves.
+You can read an introduction to [root finding on wikipedia](http://en.wikipedia.org/wiki/Root-finding_algorithm). I'm not going to introduce it here except to say that it is ubiquitous and highly relevant to science, engineering, or medical computation wherever you need to detect zero crossings in images, signals, or curves.
 
-[Bisection](http://en.wikipedia.org/wiki/Bisection_method) is a
-method that most computational scientists have seen or even used at
-some point. (It is conceptually similar to the discrete version known
-as "binary search".) It's comparably slow but reliable and
-robust. Once at least one root is known to exist in an interval, the
-method *will* converge. On the other hand, Newton-like methods are
-very fast but rather fussy about what is known of the test function's
-properties ahead of time.
+[Bisection](http://en.wikipedia.org/wiki/Bisection_method) is a method that most computational scientists have seen or even used at some point. (It is conceptually similar to the discrete version known as "binary search".) It's comparably slow but reliable and robust. Once at least one root is known to exist in an interval, the method *will* converge. On the other hand, Newton-like methods are very fast but rather fussy about what is known of the test function's properties ahead of time.
 
-The
-[secant method](http://en.wikipedia.org/wiki/Secant_method) that we
+The [secant method](http://en.wikipedia.org/wiki/Secant_method) that we
 use here is a Newton-like iterative method, which uses a simple finite
 difference in lieu of the function's symbolic derivative (as this may
 be unknown or hard to compute):
@@ -247,8 +215,7 @@ this should not be a difficult assumption to satisfy.
 
 ## Demonstration examples
 
-I am using my fork of a
-[Gist](http://gist.github.com/robclewley/ca3df340d39f6501f124), which
+I am using my fork of a [Gist](http://gist.github.com/robclewley/ca3df340d39f6501f124), which
 contains deliberate errors in the secant implementation for us to
 diagnose and fix. I am basing the algorithm implementations on someone
 else's original code to reinforce the idea that analysis can be set up
@@ -275,7 +242,7 @@ from integer values:
 
 <center>
 <img
-src="../assets/f1.gif"
+src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/f1.gif"
 alt="Function 1" style="width: 350px;"/>
 </center>
 
@@ -297,7 +264,7 @@ our domain of interest:
 
 <center>
 <img
-src="../assets/f2.gif"
+src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/f2.gif"
 alt="Function 2" style="width: 350px;"/>
 </center>
 
@@ -483,7 +450,7 @@ a long iteration. At this time, there can be no nested sub-layers.
 
 The various graphs output from our test script produced this GIF:
 
-![Resulting output converted to GIF](../assets/bisect1.gif)
+![Resulting output converted to GIF](https://github.com/robclewley/robclewley.github.io/blob/master/assets/bisect1.gif)
 
 
 #### A look through the test script
@@ -614,7 +581,7 @@ This time, the graphic shows an initial state in which the interval
 contains a single root and the function is monotone. This should be a
 no-brainer for the algorithm to converge! However, it didn't.
 
-![Resulting output converted to GIF](../assets/secant1_fail1.gif)
+![Resulting output converted to GIF](https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant1_fail1.gif)
 
 We immediately see that the secant line created from `x0` and `x1` is
 crossing the *x*-axis in the first iteration but the crossing point is
@@ -637,7 +604,7 @@ running the test script again after changing the output directory's
 name. This time, the algorithm stops at the end of the first iteration
 with this picture.
 
-![Resulting output](../assets/secant1_fail2.png)
+![Resulting output](https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant1_fail2.png)
 
 Clearly, `x2` is not nearly close enough to the actual root for the
 tolerance to have been met as intended. The log reports:
@@ -687,7 +654,7 @@ zero crossings with the initial interval. It converges after 14
 iterations. Of course, we don't get to control *which* of the many
 zeros it converges to. Here is the output:
 
-![Resulting output converted to GIF](../assets/bisect2.gif)
+![Resulting output converted to GIF](https://github.com/robclewley/robclewley.github.io/blob/master/assets/bisect2.gif)
 
 The test script is essentially identical to the previous ones.
 
@@ -699,7 +666,7 @@ after a temporary foray into much larger *x* values (at `n=5`) that give an
 impression that it's about to diverge. It converges after 12
 iterations, which is hardly better than bisection in this case.
 
-![Resulting output converted to GIF](../assets/secant2_success.gif)
+![Resulting output converted to GIF](https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant2_success.gif)
 
 You can imagine adding further
 diagnostics to uncover the origin of steps that go further from the
