@@ -682,11 +682,11 @@ neighborhood.
 
 <center>
 <img
-src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/assets/secant2_4.png?raw=true"
+src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant2_4.png?raw=true"
 alt="n=4 secant2 success" style="width:500px;"/>
 
 <img
-src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/assets/secant2_5.png?raw=true"
+src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant2_5.png?raw=true"
 alt="n=5 secant2 success" style="width: 500px;"/>
 </center>
 
