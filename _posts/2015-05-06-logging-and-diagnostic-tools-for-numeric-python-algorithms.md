@@ -49,8 +49,11 @@ I began creating this tool a couple of years ago with one of my graduate
 students, and I am continuing it now as part of my push for having
 effective tools for my research. In fact, I'm fortunate to have a [Google Summer of Code](http://www.google-melange.com/gsoc/project/details/google/gsoc2015/akuefler/5668600916475904) student working with me on this project right now.
 
-{: .center}
-![Fovea logo](https://github.com/robclewley/robclewley.github.io/blob/master/assets/fovea_logo-full.png?raw=true "Fovea logo")
+<center>
+<img
+src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/fovea_logo-full.png?raw=true"
+alt="Fovea logo" />
+</center>
 
 Fovea has a lot more to it, involving interactive graphical widgets
 for many analytical functions, including controlling parameters or
@@ -82,7 +85,7 @@ motivate you to read further...
 
 <center>
 <img
-src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant1_fail1.gif"
+src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant1_fail1.gif?raw=true"
 alt="Resulting output frames directly converted to GIF" style="width: 250px;"/>
 </center>
 
