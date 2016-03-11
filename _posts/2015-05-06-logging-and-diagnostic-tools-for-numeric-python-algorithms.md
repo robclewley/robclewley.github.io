@@ -645,7 +645,7 @@ We make the necessary fixes to the method's code, change the output
 directory again in the test script and re-run it. We find that it
 works this time:
 
-![Resulting output converted to GIF](../assets/secant1_success.gif?raw=true)
+![Resulting output converted to GIF](https://github.com/robclewley/robclewley.github.io/blob/master/assets/secant1_success.gif?raw=true)
 
 
 ### Bisection with a poorly behaved function
@@ -682,11 +682,11 @@ neighborhood.
 
 <center>
 <img
-src="(https://github.com/robclewley/robclewley.github.io/blob/master/assets/assets/secant2_4.png?raw=true"
+src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/assets/secant2_4.png?raw=true"
 alt="n=4 secant2 success" style="width:500px;"/>
 
 <img
-src="(https://github.com/robclewley/robclewley.github.io/blob/master/assets/assets/secant2_5.png?raw=true"
+src="https://github.com/robclewley/robclewley.github.io/blob/master/assets/assets/secant2_5.png?raw=true"
 alt="n=5 secant2 success" style="width: 500px;"/>
 </center>
 
