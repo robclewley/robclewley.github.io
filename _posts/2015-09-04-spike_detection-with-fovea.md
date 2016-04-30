@@ -67,7 +67,7 @@ Experts have a wealth of filters, classifiers, and numerical techniques for crun
 
 ## Setting Up Fovea
 
-The previous post walks through some commands for filling layers with data and slapping them over GUI subplots. The pca_disc.py code there described is an example of working with the vanilla diagnosticGUI (a global, singleton instance simply imported from graphics.py), but for a more complicate spike-sorting program, we’ll want a more personalized GUI.
+The previous post walks through some commands for filling layers with data and slapping them over GUI subplots. The `pca_disc.py` code there described is an example of working with the vanilla `diagnosticGUI` (a global, singleton instance simply imported from `graphics.py`), but for a more complicate spike-sorting program, we’ll want a more personalized GUI.
 
 Fovea now supports the option of initializing a new diagnosticGUIs to be subclassed by a user’s objects. 
 
@@ -80,9 +80,9 @@ class spikesorter(graphics.diagnosticGUI):
     graphics.diagnosticGUI.__init__(self, plotter)
 ```
 
-Instead of creating a ControlSys class to be juggled alongside the diagnosticGUI (as in pca_disc), spikesorter is a child of diagnosticGUI and can make use of all the plotting methods and attributes we’ve seen before.
+Instead of creating a `ControlSys` class to be juggled alongside the diagnosticGUI (as in `pca_disc`), spikesorter is a child of diagnosticGUI and can make use of all the plotting methods and attributes we’ve seen before.
 
-In the initialization, we load in a sample waveform as a PyDSTool Pointset using _importPointset()_ and convert it to a trajectory using _numeric_to_traj()_. The sample data included in the Fovea repository is a simulated neural waveform (described in [Martinez, Pedreira, Ison, & Quiroga](http://www2.le.ac.uk/departments/engineering/research/bioengineering/neuroengineering-lab/Publications/martinezJNM09.pdf)) and looks more or less like something an electrode would read out of a brain cell. For our purposes, all we need to know is that our waveform is composed from four different sources: There are two single neurons (Alice and Bob) in the immediate area of the recording channel, a cluster of nearby neurons which can’t be resolved as single cells, but whose spikes are still picked up by the electrode (multi-unit activity), and a bunch of extra-cellular noise to fuzzy things up. The end result is a waveform looking something like this:
+In the initialization, we load in a sample waveform as a PyDSTool Pointset using `importPointset()` and convert it to a trajectory using `numeric_to_traj()`. The sample data included in the Fovea repository is a simulated neural waveform (described in [Martinez, Pedreira, Ison, & Quiroga](http://www2.le.ac.uk/departments/engineering/research/bioengineering/neuroengineering-lab/Publications/martinezJNM09.pdf)) and looks more or less like something an electrode would read out of a brain cell. For our purposes, all we need to know is that our waveform is composed from four different sources: There are two single neurons (Alice and Bob) in the immediate area of the recording channel, a cluster of nearby neurons which can’t be resolved as single cells, but whose spikes are still picked up by the electrode (multi-unit activity), and a bunch of extra-cellular noise to fuzzy things up. The end result is a waveform looking something like this:
 
 ![waveform](https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/just_a_waveform.png?raw=true)
 
@@ -109,7 +109,7 @@ At this point, pressing the “up” and “down” arrow keys will translate th
 
 This threshold line is best thought of as a “knob” on our analysis. We turn the knob in this or that direction and see how the tweaks propagate to our final product.
 
-To implement special behaviors when context objects (like `line_GUI`s) are translated across the axes, we make use of Fovea’s new “user functions”. When we create a custom diagnosticGUI object (here called spikesorter) through subclassing, we have the option of overriding diagnosticGUI methods by defining functions of the same name. _user\_update\_func_ is an example of an empty method defined in diagnosticGUI for no other reason than to be overridden. It is called every time a context object is updated. So by defining  _user\_update\_func_ for spikesorter, we can patch in a bit of extra behavior:
+To implement special behaviors when context objects (like `line_GUI`s) are translated across the axes, we make use of Fovea’s new “user functions”. When we create a custom diagnosticGUI object (here called spikesorter) through subclassing, we have the option of overriding diagnosticGUI methods by defining functions of the same name. `user_update_func` is an example of an empty method defined in diagnosticGUI for no other reason than to be overridden. It is called every time a context object is updated. So by defining  `user_update_func` for spikesorter, we can patch in a bit of extra behavior:
 
 ```python
 def user_update_func(self):
@@ -153,9 +153,9 @@ def user_update_func(self):
         self.show()
 ```
 
-Once the threshold is positioned where we want it, the “d” key will detect spikes by locating each local maximum to the right of a cross-over. These maxima are the peaks of the action potentials and each is centered in its own _box\_GUI_ object created by spikesort.py. 
+Once the threshold is positioned where we want it, the “d” key will detect spikes by locating each local maximum to the right of a cross-over. These maxima are the peaks of the action potentials and each is centered in its own `box_GUI` object created by `spikesort.py`. 
 
-Unlike the “l” hot key, “d” is specific to our application. By writing a key handler method and attaching it to the canvas with mpl\_connect, it is easy to patch in new hot keys like this one. However, you must be careful not to reuse function names from Fovea, as they will be overridden. The following method is named ‘ssort_key_on’ (as opposed to ‘key_on’, used in diagnosticGUI) so that new key presses will be added to the old library of hot keys, rather than replacing it:
+Unlike the “l” hot key, “d” is specific to our application. By writing a key handler method and attaching it to the canvas with `mpl_connect`, it is easy to patch in new hot keys like this one. However, you must be careful not to reuse function names from Fovea, as they will be overridden. The following method is named `ssort_key_on` (as opposed to `key_on`, used in diagnosticGUI) so that new key presses will be added to the old library of hot keys, rather than replacing it:
 
 ```python
 def ssort_key_on(self, ev):
@@ -188,9 +188,10 @@ def ssort_key_on(self, ev):
     self.show()
 
 ```
-Once the threshold is positioned where we want it, the “d” key will detect spikes by locating each local maximum to the right of a cross-over. These maxima are the peaks of the action potentials and each is centered in its own _box\_GUI_ object created by spikesort.py. 
 
-Each _box\_GUI_ captures 64 milliseconds of neural data by default, but this value can be changed in the spikesort GUI itself. Just press “b” to create your own _box\_GUI_, give it the name “ref_box”, and the program will use its width as the new size for detecting spikes. This trick can be used in conjunction with the toolbar zoom to make very narrow bounding boxes to fit your detected spikes.
+Once the threshold is positioned where we want it, the “d” key will detect spikes by locating each local maximum to the right of a cross-over. These maxima are the peaks of the action potentials and each is centered in its own `box_GUI` object created by spikesort.py. 
+
+Each `box_GUI` captures 64 milliseconds of neural data by default, but this value can be changed in the spikesort GUI itself. Just press “b” to create your own `box_GUI`, give it the name “ref_box”, and the program will use its width as the new size for detecting spikes. This trick can be used in conjunction with the toolbar zoom to make very narrow bounding boxes to fit your detected spikes.
 
 The boxes’ contents are shown in the second (“detected spikes”) subplot, as a succession of spike profiles laid on top of each other. This plot will give you a general sense of the action potentials’ shapes (and their diversity), but it’s not yet clear how to sort them.  
 
@@ -198,11 +199,11 @@ The boxes’ contents are shown in the second (“detected spikes”) subplot, a
 
 ## Feature Extraction
 
-Any given object of study can be decomposed into features in an infinite number of ways. A birdwatcher confronting a strange specimen can consider anything from the animal’s tail-plumage, to its birdsong, to the motion of its flight in order to identify it. There is no single “right” feature or set of features to look at, because the bird is a whole of many parts. Nevertheless, selecting some attributes over others and describing experimental objects as vectors across these attributes can be very useful. This process, called _features extraction_, discretizes nature and helps us make decisions in the face of ambiguity.
+Any given object of study can be decomposed into features in an infinite number of ways. A birdwatcher confronting a strange specimen can consider anything from the animal’s tail-plumage, to its birdsong, to the motion of its flight in order to identify it. There is no single “right” feature or set of features to look at, because the bird is a whole of many parts. Nevertheless, selecting some attributes over others and describing experimental objects as vectors across these attributes can be very useful. This process, called `features extraction`, discretizes nature and helps us make decisions in the face of ambiguity.
 
 Traditionally, researchers use their domain knowledge of the subject they study to select the attributes they think are most informative. For neuroscientists, such features might be the duration or the amplitude of a spike. But Alice and Bob are closely situated in the brain. Their signals are visually abstract and more similar to one another than the appearances of crows and condors. In other words, eyeballing these spike profiles and pointing to different qualities that “seem useful” for grouping them could easily lead us astray. Is there some hidden set of features that will give us a better handle on microelectrode data? If so, how do we find it?
 
-Alarm bells should now be ringing in the heads of PCA enthusiasts. In the last post, I described the dilemma of a psychologist who wants to find the minimum, **component** feelings one might use to describe all emotions. Once this set is found, any complex emotion might be described as a weighted sum of these components (e.g., “nostalgia” might decompose to 0.8*sorrow + 0.7*happiness – 0.3*anger). PCA comes up with these components by finding a set of orthogonal directions through the data that capture the greatest amount of variance. Here, “orthogonal” essentially means that no component contains even a smidgen of another component (e.g., happiness is zero parts anger and zero parts sorrow) and “greatest amount of variance” means no other components can be composed to give a more accurate reconstruction of the data than those found by PCA (assuming the components are orthogonal). By using components as our attributes, PCA acts as an automatic feature extractor driven by mathematics, rather than intuitions.
+Alarm bells should now be ringing in the heads of PCA enthusiasts. In the last post, I described the dilemma of a psychologist who wants to find the minimum, **component** feelings one might use to describe all emotions. Once this set is found, any complex emotion might be described as a weighted sum of these components (e.g., “nostalgia” might decompose to `0.8*sorrow + 0.7*happiness – 0.3*anger`). PCA comes up with these components by finding a set of orthogonal directions through the data that capture the greatest amount of variance. Here, “orthogonal” essentially means that no component contains even a smidgen of another component (e.g., happiness is zero parts anger and zero parts sorrow) and “greatest amount of variance” means no other components can be composed to give a more accurate reconstruction of the data than those found by PCA (assuming the components are orthogonal). By using components as our attributes, PCA acts as an automatic feature extractor driven by mathematics, rather than intuitions.
 
 We neuroscientists with our spikes are now in an analogous situation to the psychologist. The difference here being the components PCA finds for our data will be a little more abstract and a little less amenable to an English-language description. Fortunately, we don’t need English-language descriptions of the components, because we have Fovea: We can visualize what spike components look like in the third subplot.
 
@@ -210,7 +211,7 @@ Pressing “p” after detecting a set of spikes will cause spikesort to carry o
 
 ![Third and Fourth Subplots](https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/third_and_fourth_subplot.png?raw=true)
 
-The important thing to notice about the PCs in the third subplot is that they look a bit like action potentials. Sure, no single one of them seems quite like it would fit in with the spikes of the “detected” plot. But it’s easy to imagine how, say, hammering out a few bumps in the red PC or flipping the green PC upside down and merging them together might give us one of the black spike profiles shown. Indeed, this is what the projection step of PCA is doing. Recall that each observed instance (a spike) is a weighted combination of the components (e.g., spike1 = 0.5*pc1 – 0.8*pc2 + 0.2*pc3). These weights stretch and flip the PCs in the manner above described before merging them through summation. In this sense, a PC might be described as a “proto-spike”: The wavy red, green and yellow lines don’t correspond to anything we’ve really recorded the brain doing, but they can be combined in different ways to generate any of the real spikes we did observe.
+The important thing to notice about the PCs in the third subplot is that they look a bit like action potentials. Sure, no single one of them seems quite like it would fit in with the spikes of the “detected” plot. But it’s easy to imagine how, say, hammering out a few bumps in the red PC or flipping the green PC upside down and merging them together might give us one of the black spike profiles shown. Indeed, this is what the projection step of PCA is doing. Recall that each observed instance (a spike) is a weighted combination of the components (e.g., `spike1 = 0.5*pc1 – 0.8*pc2 + 0.2*pc3`). These weights stretch and flip the PCs in the manner above described before merging them through summation. In this sense, a PC might be described as a “proto-spike”: The wavy red, green and yellow lines don’t correspond to anything we’ve really recorded the brain doing, but they can be combined in different ways to generate any of the real spikes we did observe.
 
 The fourth subplot, “Projected Spikes”, can be interpreted as a graph of the weights used to scale the PCs. In the below image, we use Fovea’s new picker tools to select a data-point in the fourth subplot, which highlights its corresponding detected spike as well. The chosen point is at approximated -230 on the x-axis (the red PC) and +40 on the y-axis (the green PC). 
 
@@ -230,7 +231,7 @@ Two differences should stand out when projecting onto the first/second PCs rathe
 
 ![The projected spikes subplot for first/second and third/second projections](https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/compare_fourth_subplots.png?raw=true)
 
-Second, when we introspect these clusters they should tend to be more cohesive than groupings that show up when projecting to the second/third PCs. In other words, if we look at only those detected spike profiles that go along with a given cluster, they should all look pretty similar to one another. We use a combination of key-presses and context objects to facilitate this process. Pressing “b”, we create _box\_GUI_s in the fourth subplot to fit around potential clusters of data point. When one of these bounding boxes is selected (in bold), we can then press either “1”, 2”, or “3” to color the points in that box red, green or blue, respectively (“0” returns them to black). The detected spike profiles will receive the new colors as well. Below, we see a few clusters grouped in this way:
+Second, when we introspect these clusters they should tend to be more cohesive than groupings that show up when projecting to the second/third PCs. In other words, if we look at only those detected spike profiles that go along with a given cluster, they should all look pretty similar to one another. We use a combination of key-presses and context objects to facilitate this process. Pressing “b”, we create `box_GUI`s in the fourth subplot to fit around potential clusters of data point. When one of these bounding boxes is selected (in bold), we can then press either “1”, 2”, or “3” to color the points in that box red, green or blue, respectively (“0” returns them to black). The detected spike profiles will receive the new colors as well. Below, we see a few clusters grouped in this way:
 
 ![First and second PC projections classified](https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/colors_first_and_second.png?raw=true)
 
@@ -248,7 +249,7 @@ Although the literature on classification algorithms is extensive, the fact that
 
 ## Conclusion
 
-In addition to exploring a real-world use case, this post lays out lots of new Fovea tools resulting from our work during Google Summer of Code 2015. We’ve seen how subclassing diagnosticGUI can produce more complicated programs and let us tailor Fovea’s behavior with user function overrides. We also took a look at built-in key presses, picking selected objects with the mouse-clicks, and some applications for the `line_GUI` and _box\_GUI_ context objects.
+In addition to exploring a real-world use case, this post lays out lots of new Fovea tools resulting from our work during Google Summer of Code 2015. We’ve seen how subclassing diagnosticGUI can produce more complicated programs and let us tailor Fovea’s behavior with user function overrides. We also took a look at built-in key presses, picking selected objects with the mouse-clicks, and some applications for the `line_GUI` and `box_GUI` context objects.
 
 <a name="head8"></a>
 
