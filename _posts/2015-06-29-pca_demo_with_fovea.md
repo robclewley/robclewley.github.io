@@ -304,10 +304,10 @@ However, as we flit around dimensions, generating different “AFTER” data, an
 
 Fortunately, Fovea’s object-oriented design makes it easy to add new classes that store and reuse attributes during interactive plotting sessions. Reworking a bit of code from Benjamin Root’s [Interactive Applications Using Matplotlib](https://www.packtpub.com/application-development/interactive-applications-using-matplotlib), we can come up with a control system class, `ControlSys`, whose fields include:
 
-**d** (the number of PC’s we wish to start with), 
-**c** (a counter for keeping track of which hypersphere is on display), 
-**proj_vecsLO** (Two orthonormal vectors for projecting post-PCA data), 
-**proj_vecsHI** (Three orthonormal vectors for projecting pre-PCA data)
+ - **d** (the number of PC’s we wish to start with)
+ - **c** (a counter for keeping track of which hypersphere is on display)
+ - **proj_vecsLO** (Two orthonormal vectors for projecting post-PCA data)
+ - **proj_vecsHI** (Three orthonormal vectors for projecting pre-PCA data)
 
 This class also includes a modified version of our function, `keypress()`, which now cycles between layers/clusters (left and right), re-computes PCA in different dimensions (up and down), and changes visibilities (`m` and `h`).
 
