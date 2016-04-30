@@ -38,13 +38,13 @@ found on [github](https://github.com/robclewley/fovea)._
 
 <a name="head1"></a>
 
-##Introduction
+## Introduction
 
 In my previous post, I explored how Fovea can elucidate the process of picking the best number of dimensions to express multivariate data. As a corollary, I provided a bit of information about Principal Component Analysis (PCA) and showed off the geometry of this projection-based dimensionality reduction method. With these basics in place, we can turn to a fun application of PCA (and visual diagnostics) to a real problem in neuroscience. Namely, how do we determine which brain cells emit which spikes if we record a sample containing different signals?
 
 <a name="head2"></a>
 
-##Background
+## Background
 
 A multi-electrode array is a tiny bed of pin-like sensors driven into the soft jelly of the brain. Each pin (electrode) records electrical changes near individual neurons as a numerical value that dips and spikes as the cell hyper- and de-polarizes. Given that the array can contain tens or hundreds of electrodes, multi-electrode arrays collect matrix data describing voltage at many different points.
 
@@ -65,7 +65,7 @@ Experts have a wealth of filters, classifiers, and numerical techniques for crun
 
 <a name="head3"></a>
 
-##Setting Up Fovea
+## Setting Up Fovea
 
 The previous post walks through some commands for filling layers with data and slapping them over GUI subplots. The pca_disc.py code there described is an example of working with the vanilla diagnosticGUI (a global, singleton instance simply imported from graphics.py), but for a more complicate spike-sorting program, we’ll want a more personalized GUI.
 
@@ -95,11 +95,11 @@ Looking at this plot, we want to determine which peaks came from Alice, which ca
 ## Spike Detection
 
 Finding true positives means admitting false positives. Such is life. When setting a threshold (i.e., the minimum acceptable height for a peak in the waveform to be considered an action potential) we invariably exclude some interesting spikes from our analysis. Or we error in the opposite direction and admit noise that’s tall enough to ride. Spike detection is a recurring theme of the last blogpost: data analysis is replete will subjective judgments, but visual diagnostics can help inform us before we make decisions.
-Using Fovea’s new callbacks, we can create a threshold line to be translated up and down the waveform, admitting (or dismissing) candidate spikes as it moves along. Pressing “l” will activate line creation mode, at which point, a _line\_GUI_ object can be drawn on the axes by clicking and dragging. Once created, we can produce a perfectly horizontal threshold that extends the breadth of the data by pressing “m”.
+Using Fovea’s new callbacks, we can create a threshold line to be translated up and down the waveform, admitting (or dismissing) candidate spikes as it moves along. Pressing “l” will activate line creation mode, at which point, a `line_GUI` object can be drawn on the axes by clicking and dragging. Once created, we can produce a perfectly horizontal threshold that extends the breadth of the data by pressing “m”.
 
 ![lines before and after 'm' press](https://github.com/robclewley/robclewley.github.io/blob/master/assets/spikesort_images/both_lines.png?raw=true)
 
-In spikesort.py, this line won’t start detecting spikes until it’s been renamed “thresh”. Since this _line\_GUI_ is our currently selected object (having just created it), we can update its name with the following call:
+In spikesort.py, this line won’t start detecting spikes until it’s been renamed “thresh”. Since this `line_GUI` is our currently selected object (having just created it), we can update its name with the following call:
 
 ```python
 ssort.selected_object.update(name = 'thresh')
@@ -109,7 +109,7 @@ At this point, pressing the “up” and “down” arrow keys will translate th
 
 This threshold line is best thought of as a “knob” on our analysis. We turn the knob in this or that direction and see how the tweaks propagate to our final product.
 
-To implement special behaviors when context objects (like _line\_GUI_s) are translated across the axes, we make use of Fovea’s new “user functions”. When we create a custom diagnosticGUI object (here called spikesorter) through subclassing, we have the option of overriding diagnosticGUI methods by defining functions of the same name. _user\_update\_func_ is an example of an empty method defined in diagnosticGUI for no other reason than to be overridden. It is called every time a context object is updated. So by defining  _user\_update\_func_ for spikesorter, we can patch in a bit of extra behavior:
+To implement special behaviors when context objects (like `line_GUI`s) are translated across the axes, we make use of Fovea’s new “user functions”. When we create a custom diagnosticGUI object (here called spikesorter) through subclassing, we have the option of overriding diagnosticGUI methods by defining functions of the same name. _user\_update\_func_ is an example of an empty method defined in diagnosticGUI for no other reason than to be overridden. It is called every time a context object is updated. So by defining  _user\_update\_func_ for spikesorter, we can patch in a bit of extra behavior:
 
 ```python
 def user_update_func(self):
@@ -248,7 +248,7 @@ Although the literature on classification algorithms is extensive, the fact that
 
 ## Conclusion
 
-In addition to exploring a real-world use case, this post lays out lots of new Fovea tools resulting from our work during Google Summer of Code 2015. We’ve seen how subclassing diagnosticGUI can produce more complicated programs and let us tailor Fovea’s behavior with user function overrides. We also took a look at built-in key presses, picking selected objects with the mouse-clicks, and some applications for the _line\_GUI_ and _box\_GUI_ context objects.
+In addition to exploring a real-world use case, this post lays out lots of new Fovea tools resulting from our work during Google Summer of Code 2015. We’ve seen how subclassing diagnosticGUI can produce more complicated programs and let us tailor Fovea’s behavior with user function overrides. We also took a look at built-in key presses, picking selected objects with the mouse-clicks, and some applications for the `line_GUI` and _box\_GUI_ context objects.
 
 <a name="head8"></a>
 
