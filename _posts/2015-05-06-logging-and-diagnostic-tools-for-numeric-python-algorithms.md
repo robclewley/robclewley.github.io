@@ -91,7 +91,7 @@ alt="Resulting output frames directly converted to GIF" style="width: 500px;"/>
 
 We have enough new ideas to cover here that, for the time being, I
 won't be presenting this work in the form of my [literate modeling
-workflow](http://robclewley.github.io/2015/04/06/capturing-the-provenance-of-model-prototyping-and-development/).
+workflow](http://robclewley.github.io/2015/04/06/capturing-the-provenance-of-model-prototyping-and-development).
 
 <a name="head1"></a>
 
@@ -817,7 +817,7 @@ never be a simple solution to that problem.
 
 I considered using ipython notebooks for this post. It's a fine idea
 in principle, given some of my
-[recent epiphanies](http://robclewley.github.io/2015/04/18/ipython-notebooks-for-literate-modeling/),
+[recent epiphanies](http://robclewley.github.io/2015/04/18/ipython-notebooks-for-literate-modeling),
 but what does it really gain for us here? One possiblity would be using the
 `yaml_magic` extension to simplify how to specify the event arguments
 to the logger. Alas, on further investigation, I realized that we can't
@@ -843,7 +843,7 @@ unstable manifolds in 2D (phase plane) models.
 ---------
 
 <span class="Z3988"
-title="ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.jtitle=Transient+Dynamic+blog&rft_id=info%3Aother%2F&rfr_id=info%3Asid%2Fresearchblogging.org&rft.atitle=Logging+and+diagnostic+tools+for+numeric+python+algorithms&rft.issn=&rft.date=2015&rft.volume=&rft.issue=&rft.spage=&rft.epage=&rft.artnum=http%3A%2F%2Frobclewley.github.io%2F%2Flogging-and-diagnostic-tools-for-numeric-python-algorithms%2F&rft.au=Robert+Clewley&rfe_dat=bpr3.included=1;bpr3.tags=Computer+Science+%2F+Engineering%2CMathematics%2CResearch+%2F+Scholarship%2COther%2CInformatics%2C+Human-Computer+Interaction%2C+Applied+Mathematics%2C+Education%2C+Science+Communication%2C+Graphics%2C+Algorithms">Robert
+title="ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.jtitle=Transient+Dynamic+blog&rft_id=info%3Aother%2F&rfr_id=info%3Asid%2Fresearchblogging.org&rft.atitle=Logging+and+diagnostic+tools+for+numeric+python+algorithms&rft.issn=&rft.date=2015&rft.volume=&rft.issue=&rft.spage=&rft.epage=&rft.artnum=http%3A%2F%2Frobclewley.github.io%2F2015%2F05%2F06%2Flogging-and-diagnostic-tools-for-numeric-python-algorithms%2F&rft.au=Robert+Clewley&rfe_dat=bpr3.included=1;bpr3.tags=Computer+Science+%2F+Engineering%2CMathematics%2CResearch+%2F+Scholarship%2COther%2CInformatics%2C+Human-Computer+Interaction%2C+Applied+Mathematics%2C+Education%2C+Science+Communication%2C+Graphics%2C+Algorithms">Robert
 Clewley (2015). Logging and diagnostic tools for numeric python
 algorithms. <span style="font-style: italic;">Transient Dynamic
 blog</span></span>
