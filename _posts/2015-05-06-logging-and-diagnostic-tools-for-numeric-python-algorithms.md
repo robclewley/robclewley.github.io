@@ -91,7 +91,7 @@ alt="Resulting output frames directly converted to GIF" style="width: 500px;"/>
 
 We have enough new ideas to cover here that, for the time being, I
 won't be presenting this work in the form of my [literate modeling
-workflow](http://robclewley.github.io/capturing-the-provenance-of-model-prototyping-and-development/).
+workflow](http://robclewley.github.io/2015/04/06/capturing-the-provenance-of-model-prototyping-and-development/).
 
 <a name="head1"></a>
 
@@ -817,7 +817,7 @@ never be a simple solution to that problem.
 
 I considered using ipython notebooks for this post. It's a fine idea
 in principle, given some of my
-[recent epiphanies](http://robclewley.github.io/ipython-notebooks-for-literate-modeling/),
+[recent epiphanies](http://robclewley.github.io/2015/04/18/ipython-notebooks-for-literate-modeling/),
 but what does it really gain for us here? One possiblity would be using the
 `yaml_magic` extension to simplify how to specify the event arguments
 to the logger. Alas, on further investigation, I realized that we can't

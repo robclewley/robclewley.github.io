@@ -33,7 +33,7 @@ references:
 This is Part 1 of a series of posts.
 
 As I discussed
-[recently](http://robclewley.github.io/sumatra-and-simulation-management-or-literate-modeling/)
+[recently](http://robclewley.github.io/2015/04/01/sumatra-and-simulation-management-or-literate-modeling/)
 in a blog post and comments, I want to see the early development
 process for mathematical models deconstructed into somewhat formalized
 workflows that can be meaningfully captured by version control systems
