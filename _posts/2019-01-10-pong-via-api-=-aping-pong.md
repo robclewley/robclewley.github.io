@@ -26,7 +26,7 @@ No downloads, sign up, or authentication are necessary to start. You just need a
 
 Here's a live update of the game stats from the server:
 <center>
-    <iframe width="550" height="60" src="https://aping-pong.herokuapp.com/stats_totals" frameborder="5">
+    <iframe width="550" height="40" src="https://aping-pong.herokuapp.com/stats_totals" frameborder="0">
     </iframe>
 </center>
 
