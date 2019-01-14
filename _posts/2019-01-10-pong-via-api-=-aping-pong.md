@@ -23,7 +23,7 @@ When the game is ready, the dimensions of the court and paddle(s) are randomized
 No downloads, sign up, or authentication are necessary to start. You just need access to the internet and a scripting language. **Hot tip:** If you keep note of a unique player ID that you are provided and reuse it, you can maintain an identity with the server and claim the positions on the leaderboard by associating a name tag to that ID code.
 
 <center>
-    <iframe width="550" height="100" src="https://aping-pong.herokuapp.com/stats_totals/" frameborder="0">
+    <iframe width="550" height="60" src="https://aping-pong.herokuapp.com/stats_totals" frameborder="0">
     </iframe>
 </center>
 
