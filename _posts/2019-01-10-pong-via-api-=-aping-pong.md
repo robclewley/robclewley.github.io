@@ -16,6 +16,8 @@ Games can be great at motivating learning of new skills. The classic videogame [
 
 For my own entertainment and practice in building performant python web applications with [Flask](http://flask.pocoo.org/), [Dash](https://dash.plot.ly), and [Heroku](http://heroku.com), I made a [real-time online pong game](https://aping-pong.herokuapp.com/) against *real* opponents (not against the game server) that's meant to be played by bots. You can compete with other people/bots online and put yourself on a leaderboard if you're good. This is no Kaggle competition, but it still sounds enriching and entertaining, right? You might want to recall your [trigonometry classes](https://www.youtube.com/results?search_query=trigonometry+for+gaming), though.
 
+<center><img src="https://media.giphy.com/media/tJc0Sq1jilB8A/giphy.gif" alt="pong" width="250" height="100"></center>
+
 So, here's the challenge. Pick single-player (squash) or two-player (pong). Declare your intention to play via the API. For squash, the game will then countdown to start, otherwise you'll wait until there's a second player to join in the lobby before the countdown.
 
 When the game is ready, the dimensions of the court and paddle(s) are randomized, as is the initial ball trajectory. The game simulates _in real time_, so you make API calls to fetch the game's current position data and status and to move your paddle to keep the ball bouncing as long as you can. Game stats are recorded and the best are posted on the landing page's dashboard.
