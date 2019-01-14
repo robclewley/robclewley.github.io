@@ -22,6 +22,11 @@ When the game is ready, the dimensions of the court and paddle(s) are randomized
 
 No downloads, sign up, or authentication are necessary to start. You just need access to the internet and a scripting language. **Hot tip:** If you keep note of a unique player ID that you are provided and reuse it, you can maintain an identity with the server and claim the positions on the leaderboard by associating a name tag to that ID code.
 
+<center>
+    <iframe width="550" height="100" src="https://aping-pong.herokuapp.com/stats_totals/" frameborder="0">
+    </iframe>
+</center>
+
 ## But why?
 
 Data science in real life is not much like it is portrayed in the courses that I see taught and the media. I also think the domain of "data analysis" is underrated compared to "data science", which gets more attention from the hype of machine learning. [HBR recently echoed my thoughts on this nicely.](https://hbr.org/2018/12/what-great-data-analysts-do-and-why-every-organization-needs-them) Meanwhile, data science course offerings tend to follow the money/hype and often focus more on algorithms and the latest technologies compared to developing solid fundamental data skills that are useful every day. The success of the most sophisticated ML lives or dies by the quality of the input data and the relevance and meaningful design of the transformations and interpretations of data going in and out.
