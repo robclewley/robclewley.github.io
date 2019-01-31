@@ -7,12 +7,11 @@ I am an Atlanta-based computational and data scientist, originally from England.
 
 For now, a more formal biography can be found at the archive of my [GSU page](https://pydstool.github.io/biosketch/index.html).
 
-Here is my [twitter feed](https://twitter.com/robertclewley) and my [github page](https://github.com/robclewley).
+Check out my [twitter feed](https://twitter.com/robertclewley) and my [github page](https://github.com/robclewley).
 
-I also produce [electronic music](https://ripplecountyprimary.bandcamp.com) and engineer for [pumashock](https:/pumashock.bandcamp.com).
+I also produce [electronic music](https://ripplecountyprimary.bandcamp.com) and engineer for [pumashock](https:/pumashock.bandcamp.com). And I make [techy computer games for hackers](https://transient-dynamic.itch.io) and [for learners](https://aping-pong.herokuapp.com).
 
-<h2 id="Contact">Please reach out if you'd like a free consultation on your needs.</h2>
-<br>
+<h2 id="Contact">Please reach out if you'd like a free consultation.</h2>
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
