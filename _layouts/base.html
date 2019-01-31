@@ -19,17 +19,21 @@ common-js:
   <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
   {% include head.html %}
 
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
   <body>
 
     {% include gtm_body.html %}
-  
+
     {% include nav.html %}
 
     {{ content }}
 
     {% include footer.html %}
-  
+
     {% include footer-scripts.html %}
-  
+
   </body>
 </html>
