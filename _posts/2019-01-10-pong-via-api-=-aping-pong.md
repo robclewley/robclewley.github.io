@@ -2,7 +2,7 @@
 layout: post
 title: "Pong via API = APIng Pong"
 comments: true
-tags: ['AI','data science','pong','gaming','education','bot']
+tags: ['AI','data science','pong','gaming','education','bot','serious game']
 redirect_from: ""
 permalink: /2019/01/10/pong-via-api-=-aping-pong
 references:
@@ -12,13 +12,13 @@ references:
 
 ## "Data analyst" is not the runner-up prize to "data scientist"
 
-Data science in real life is not much like it is portrayed in the courses that I see taught and the media. I also think the domain of "data analysis" is underrated compared to "data science", which gets more attention from the hype of machine learning. [HBR recently echoed my thoughts on this nicely.](https://hbr.org/2018/12/what-great-data-analysts-do-and-why-every-organization-needs-them) Meanwhile, data science course offerings tend to follow the money/hype and often focus more on algorithms and the latest technologies compared to developing solid fundamental data skills that are useful every day. The success of the most sophisticated ML lives or dies by the quality of the input data and the relevance and meaningful design of the transformations and interpretations of data going in and out.
+Data science in real life is not much like it is portrayed in the courses that I see taught and in the media. I also think the domain of "data analysis" is underrated compared to "data science", which gets more attention from the hype of machine learning. [HBR recently echoed my thoughts on this nicely.](https://hbr.org/2018/12/what-great-data-analysts-do-and-why-every-organization-needs-them) Meanwhile, data science course offerings tend to follow the money/hype and often focus more on algorithms and the latest technologies compared to developing solid fundamental data skills that are useful every day. The success of the most sophisticated ML lives or dies by the quality of the input data and the relevance and meaningful design of the transformations and interpretations of data going in and out.
 
 But, unlike a lot of data science competition scenarios, in real life you are often presented with highly novel situations and black box systems that you have to assess from scratch. As with most software development, technicians start by building their tools. Similarly, you'll need to spend some time observing game behavior, probably visualizing it, before iterating on your control algorithm -- like a real scientist would!
 
 ## APIng Pong is like a Bird Box Challenge for playing vintage pong
 
-Games can be great at motivating learning of new skills. The classic videogame ["pong"](https://en.wikipedia.org/wiki/Pong) may not present a great challenge to either human or AI players, but it's a perfectly fun and educational challenge when you're learning how to code and work with data. _Especially if you can't easily see what you're doing._
+Games can be great at motivating the learning of new skills. The classic videogame ["pong"](https://en.wikipedia.org/wiki/Pong) may not present a great challenge to either human or AI players, but it's a perfectly fun and educational challenge when you're learning how to code and work with data. _Especially if you can't easily see what you're doing._
 
 The [games I've been developing in the past couple of years](https://transient-dynamic.itch.io/dragonflyops) have been light on graphics and heavy on challenging the player to figure out what they need to get started. Recently, I've experimented with purely online games to focus on interactions between real players in real time.
 
