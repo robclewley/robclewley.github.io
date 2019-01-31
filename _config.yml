@@ -7,12 +7,6 @@
 url: "https://robclewley.com"
 baseurl: ""
 
-# If you are building a GitHub project page then use these settings:
-#url: "http://username.github.io/projectname"
-#baseurl: "/projectname"
-
-# Of course don't forget to change the username and projectname to YOUR username and project
-
 # Name of website
 title: Robert Clewley, Atlanta, GA
 
@@ -23,7 +17,8 @@ description: Data Science, Computational Science, Coaching, Consulting, and Educ
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  About Me / Contact: "aboutme"
+  Blog: "blog"
   Home: "http://robclewley.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
@@ -119,7 +114,7 @@ url-pretty: "RobClewley.com"
 # --- Comments --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-# disqus: "robclewleygithubio"
+disqus: "robclewleygithubio"
 
 # To use Facebook Comments, fill in a Facebook App ID
 # fb_comment_id: ""
