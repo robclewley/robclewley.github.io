@@ -68,7 +68,7 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
   rss: true
-  email: "rclewley101@gmail.com"
+#  email: "rclewley101@gmail.com"
   github: robclewley
   twitter: RobertClewley
   linkedin: robert-clewley-0a231565
