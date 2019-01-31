@@ -107,18 +107,18 @@
 }
 .btn-success:hover,
 .btn-success:focus {
-  background-color: #8FC468; ##419641;
+  background-color: #81a963; ##419641;
   background-position: 0 -15px;
 }
 .btn-success:active,
 .btn-success.active {
-  background-color: #8FC468; ##419641;
+  background-color: #81a963; ##419641;
   border-color: #3e8f3e;
 }
 .btn-success.disabled,
 .btn-success:disabled,
 .btn-success[disabled] {
-  background-color: #8FC468; ##419641;
+  background-color: #81a963; ##419641;
   background-image: none;
 }
 .btn-info {
