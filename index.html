@@ -43,9 +43,9 @@ bigimg:
     </center>
   </div>
 
-<hr>
+<hr id="blog">
 
-<div class="posts-list" id="blog">
+<div class="posts-list">
   {% for post in paginator.posts %}
   <article>
     <a class="post-preview" href="{{ post.url | prepend: site.baseurl }}">
