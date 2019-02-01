@@ -792,6 +792,7 @@ td.gutter {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
   border-color: #3967b4;
+  color: #d5e6ea; 
 }
 .get-started-btn:hover,
 .get-started-btn:focus {
