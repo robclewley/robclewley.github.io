@@ -11,7 +11,7 @@ baseurl: ""
 title: Rob Clewley
 
 # Short description of your site
-description: Data Science, Computational Science, Coaching, Consulting, and Education
+description: Data Science, Architecture, Computational Science, Coaching, Consulting, and Education
 
 # --- Navigation bar options --- #
 
@@ -27,7 +27,7 @@ avatar: "/img/avatar-icon.png"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-# title-img: /path/to/image
+title-img: "/img/qrcode.png"
 
 # --- Background colour/image options --- #
 
@@ -242,6 +242,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
-  
+
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
