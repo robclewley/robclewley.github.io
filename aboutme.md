@@ -3,11 +3,13 @@ layout: page
 title: About
 ---
 
-I am an Atlanta-based computational and data scientist, originally from England. My blog documents some of what I do and to teach people new ways of looking at data and computation. An introduction can be found in my [first post]({% post_url 2015-03-30-hello-world %}).
+I am a long-time Atlanta-based computational and data scientist, originally from England.
 
-For now, a more formal biography can be found at the archive of my [GSU page](https://pydstool.github.io/biosketch/index.html).
+I was an assistant professor at Georgia State University for 7 years before moving into industry as senior data research manager at Mailchimp. I have a CS degree from Cambridge University and a PhD in applied mathematical modeling from Bristol University.
 
-Check out my [twitter feed](https://twitter.com/robertclewley) and my [github page](https://github.com/robclewley).
+A more detailed academic biography can be found at the archive of my [GSU page](https://pydstool.github.io/biosketch/index.html).
+
+My blog aims to teach people new ways of looking at data and computation. An introduction can be found in my [first post]({% post_url 2015-03-30-hello-world %}).
 
 I also produce [electronic music](https://ripplecountyprimary.bandcamp.com) and engineer for [pumashock](https:/pumashock.bandcamp.com). And I make [techy computer games for hackers](https://transient-dynamic.itch.io) and [for learners](https://aping-pong.herokuapp.com).
 
