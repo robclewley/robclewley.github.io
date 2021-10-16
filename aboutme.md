@@ -5,7 +5,7 @@ title: About
 
 I am a long-time Atlanta-based computational and data scientist, originally from England.
 
-I was an assistant professor at Georgia State University for 7 years before moving into industry as senior data research manager at Mailchimp. I have a CS degree from Cambridge University and a PhD in applied mathematical modeling from Bristol University.
+I was an assistant professor at Georgia State University for 7 years before moving into industry as senior data research manager at Mailchimp, now a principal data scientist at FullStory. I have a CS degree from Cambridge University and a PhD in applied mathematical modeling from Bristol University.
 
 A more detailed academic biography can be found at the archive of my [GSU page](https://pydstool.github.io/biosketch/index.html).
 
