@@ -101,6 +101,9 @@ url-pretty: "RobClewley.com"
 
 # Google Tag Manager ID
 gtm: "GTM-KH7JP9S"
+google:
+  tag_manager:
+    container_id: GTM-KH7JP9S
 
 # Matomo (aka Piwik) Web statistics
 # Uncomment the following section to enable Matomo. The opt-out parameter controls
