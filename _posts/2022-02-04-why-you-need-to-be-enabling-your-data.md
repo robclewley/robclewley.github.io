@@ -48,9 +48,9 @@ The last one is the meaty part of the work to be done!
 
 This is in stark contrast to the individually-focused workflows for data science that are ubiquitous. (See [slide 18](https://docs.google.com/presentation/d/1a1RwcdfPm41ecCAdm_U0nabW8d8SAJQgPDsSbRa7qbY/edit#slide=id.ge991cfe913_0_10) in the presentation embedded below.)
 
-## The DKIM pyramid and the impact of data science on business outcomes
+## The DIKW pyramid and the impact of data science on business outcomes
 
-I like to think about the part of good data science practices in the context of the "DKIM pyramid": `Data -> Information -> Knowledge -> Wisdom`
+I like to think about the part of good data science practices in the context of the [DIKW pyramid](https://en.wikipedia.org/wiki/DIKW_pyramid): `Data -> Information -> Knowledge -> Wisdom`
 
 To progress along this hierarchy, we ideally need activities in this order (roughly, and not 1-to-1):
  - Collection
