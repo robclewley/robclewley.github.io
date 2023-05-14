@@ -12,8 +12,7 @@ Impact with data science flows from empowered individuals who can make wise, wel
 
 **In a nutshell:**
 
- - Data Science is about evidence-based decisions, action,
- and IMPACT
+ - Data Science is about evidence-based decisions, action, and **impact**
 
  - The application and context of data is _everything_ ...
 
