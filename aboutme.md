@@ -15,6 +15,8 @@ I also produce [electronic music](https://ripplecountyprimary.bandcamp.com) and 
 
 <h2 id="Contact">Please reach out if you'd like a free consultation.</h2>
 
+Either set up a [30 min chat on Calendly](https://calendly.com/rob-clewley/chat-with-rob) or use this form to get in touch.
+
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <div>
