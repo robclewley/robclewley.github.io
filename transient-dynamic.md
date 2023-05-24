@@ -1,6 +1,8 @@
 ---
 layout: page
-title: Transient Dynamic
+title: "Transient Dynamic"
+tags: [STEM, learning, gaming, educational, math, science, tech]
+comments: true
 ---
 
 My [Transient Dynamic](https://transient-dynamic.itch.io/) creative hobby outlet is the trifecta that combines:
