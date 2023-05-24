@@ -9,6 +9,7 @@ My [Transient Dynamic](https://transient-dynamic.itch.io/) creative hobby outlet
  - My work in data science, software development, and user experience
  - My game development hobby
 
+<br>
 <center><img src="{{site.baseurl}}/assets/OPERANDi5.png" alt="OPERANDi" height="300" width="300"></center>
 
 The latest experiment is a sci-fi hacker simulation game called [OPERANDi](https://transient-dynamic.itch.io/operandi) (downloadable demo expected in Summer '23). It is a unique opportunity to learn real scientific skills in a fun and deeply engaging video game. The game touches on a variety of intermediate and advanced STEM topics involving data and math modeling in a practical, realistic, and challenging simulated setting, with a "hard sci-fi" story-driven backdrop.
