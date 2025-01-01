@@ -19,7 +19,9 @@ My [Transient Dynamic](https://transient-dynamic.itch.io/) creative hobby outlet
 
 <iframe frameborder="0" src="https://itch.io/embed/3139741?bg_color=4b147e&amp;fg_color=aaaaaa&amp;link_color=e47c63&amp;border_color=743da7" width="552" height="167"><a href="https://transient-dynamic.itch.io/sum-it">Sum-It by transient-dynamic</a></iframe>
 
-A procedurally-generated code-breaking puzzler that you can solve by hand or programmatically to try to make it onto the online leaderboard. Playable for free in the browser, or download to use the API and get the 4-track OST included.
+If `A$B = 5`, A and B are digits, and $ is an arithmetic operator, what are their possible solutions? Now what about `AD$AC%DCC%CB = -402`? 
+
+Sum-It is a procedurally-generated code-breaking puzzler that you can solve by hand or programmatically if you want to test out your algorithm and coding skills. Try to make it onto the online leaderboard! It's playable for free in the browser, or download to use the API and get the 4-track OST included.
 
 ### Flowee
 
