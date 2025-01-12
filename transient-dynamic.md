@@ -25,7 +25,9 @@ Sum-It is a procedurally-generated code-breaking puzzler that you can solve by h
 
 ### Flowee
 
-_Coming soon!_
+<iframe frameborder="0" src="https://itch.io/embed/3059729?bg_color=1f5b4c&amp;fg_color=e7c077&amp;link_color=69c56f&amp;border_color=437f70" width="552" height="167"><a href="https://transient-dynamic.itch.io/flowee">Flowee by transient-dynamic</a></iframe>
+
+Flowee is a daily logic puzzle that combines spatial optimization with simple sums. There's a unique easy, medium, and hard puzzle every day. The downloadable version lets you play offline and includes mp3s of the soundtrack and an easy way to share your wins on social media.
 
 
 ### OPERANDi
