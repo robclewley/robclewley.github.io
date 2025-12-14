@@ -46,14 +46,14 @@ I am looking for playtesters and community feedback to help me polish and refine
 
 Some sound effects are adapted from the following clips.
 
-#### Attribution 3
+#### Attribution 3.0
 
  - Motor Whir.wav by jesabat -- https://freesound.org/s/119739/ 
  - Nokia Bleeps by kwahmah_02 -- https://freesound.org/s/274758/
  - SingleWub.wav by Sllarson -- https://freesound.org/s/342570/
  - collecting_health.wav by rdaly95 -- https://freesound.org/s/387133/
 
-#### Attribution 4
+#### Attribution 4.0
 
  - microwave beep.wav by KeyKrusher -- https://freesound.org/s/154953/
  - Error.wav by Autistic Lucario -- https://freesound.org/s/142608/
@@ -74,6 +74,8 @@ Some sound effects are adapted from the following clips.
  - Chair Piston Moving down.wav by jacko4526 -- https://freesound.org/s/656009/
  - 1990 33 rpm record crackle (medium wear).wav by CGEffex -- https://freesound.org/s/95109/
  - water supply system 02 150428_0652.flac by klankbeeld -- https://freesound.org/s/329338/ 
+ - Connect1 by RICHERlandTV -- https://freesound.org/s/351548/
+ - Connect3 by RICHERlandTV -- https://freesound.org/s/351556/
 
 #### Sampling+
 
