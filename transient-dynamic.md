@@ -38,11 +38,13 @@ Flowee is a daily logic puzzle that combines spatial optimization with simple su
 
 The latest experiment is a sci-fi hacker simulation game called [OPERANDi](https://transient-dynamic.itch.io/operandi) (downloadable demo forthcoming!). It is a unique opportunity to learn real scientific skills in a fun and deeply engaging video game. The game involves a variety of intermediate and advanced STEM topics in a practical, realistic, and challenging setting, with a "hard sci-fi" story-driven backdrop. The API client can be [found here](https://github.com/robclewley/OPERANDi-client).
 
-The early demo is free to play on Windows or Mac. As it's still in development, it uses some placeholder image assets for the title and background art.
+The alpha demo is free to play on Windows or Mac. As it's still in development, it uses some placeholder image assets for the title and background art.
 
 I am looking for playtesters and community feedback to help me polish and refine the final product.
 
-**Here are the audio clip attribution credits:**
+**Here are the audio and music attribution credits:**
+
+All the music in game is either composed and produced by me, or in a few cases in collaboration as part of the group Fermium.
 
 Some sound effects are adapted from the following clips.
 
