@@ -34,7 +34,7 @@ Flowee is a daily logic puzzle that combines spatial optimization with simple su
 
 ### OPERANDi
 
-<center><img src="{{site.baseurl}}/assets/OPERANDi5.png" alt="OPERANDi" height="300" width="300"></center>
+<center><img src="{{site.baseurl}}/assets/OPERANDi5.png" alt="OPERANDi" height="780" width="492"></center>
 
 The latest experiment is a sci-fi hacker simulation game called [OPERANDi](https://transient-dynamic.itch.io/operandi) (downloadable demo forthcoming!). It is a unique opportunity to learn real scientific skills in a fun and deeply engaging video game. The game involves a variety of intermediate and advanced STEM topics in a practical, realistic, and challenging setting, with a "hard sci-fi" story-driven backdrop. The API client can be [found here](https://github.com/robclewley/OPERANDi-client).
 
