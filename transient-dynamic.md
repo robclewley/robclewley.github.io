@@ -18,7 +18,7 @@ My [Transient Dynamic](https://transient-dynamic.itch.io/) creative hobby outlet
 
 ### OPERANDi
 
-<center><img src="{{site.baseurl}}/assets/OPERANDi5.png" alt="OPERANDi" height="200" width="780"></center>
+<center><img src="{{site.baseurl}}/assets/flyer-front.jpg" alt="OPERANDi" height="400" width="600"></center>
 
 The latest experiment is a sci-fi hacker simulation game called [OPERANDi](https://transient-dynamic.itch.io/operandi). It is a unique opportunity to learn real scientific skills in a narrative-driven video game. It involves a variety of intermediate and advanced STEM topics in a practical, realistic, and challenging setting, with a "hard sci-fi" backdrop. The API client can be [found here](https://github.com/robclewley/OPERANDi-client).
 
