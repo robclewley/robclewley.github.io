@@ -26,7 +26,7 @@ The demo is free to play on Windows or Mac.
 
 I am looking for playtesters and community feedback to help me polish and refine the final product.
 
-<iframe frameborder="0" src="https://itch.io/embed/2068202?border_width=2&amp;bg_color=270e16&amp;fg_color=c9bb85&amp;border_color=E39D51" width="554" height="169"><a href="https://transient-dynamic.itch.io/operandi">OPERANDi by transient-dynamic</a></iframe>
+<iframe frameborder="0" src="https://itch.io/embed/2068202?linkback=true&amp;border_width=2&amp;bg_color=270e16&amp;fg_color=c9bb85&amp;border_color=E39D51" width="554" height="169"><a href="https://transient-dynamic.itch.io/operandi">OPERANDi by transient-dynamic</a></iframe>
 
 
 **Audio and music attribution credits:**
