@@ -18,13 +18,16 @@ My [Transient Dynamic](https://transient-dynamic.itch.io/) creative hobby outlet
 
 ### OPERANDi
 
-<center><img src="{{site.baseurl}}/assets/OPERANDi5.png" alt="OPERANDi" height="492" width="780"></center>
+<center><img src="{{site.baseurl}}/assets/OPERANDi5.png" alt="OPERANDi" height="200" width="780"></center>
 
 The latest experiment is a sci-fi hacker simulation game called [OPERANDi](https://transient-dynamic.itch.io/operandi). It is a unique opportunity to learn real scientific skills in a narrative-driven video game. It involves a variety of intermediate and advanced STEM topics in a practical, realistic, and challenging setting, with a "hard sci-fi" backdrop. The API client can be [found here](https://github.com/robclewley/OPERANDi-client).
 
 The demo is free to play on Windows or Mac.
 
 I am looking for playtesters and community feedback to help me polish and refine the final product.
+
+<iframe frameborder="0" src="https://itch.io/embed/2068202?border_width=2&amp;bg_color=270e16&amp;fg_color=c9bb85&amp;border_color=E39D51" width="554" height="169"><a href="https://transient-dynamic.itch.io/operandi">OPERANDi by transient-dynamic</a></iframe>
+
 
 **Audio and music attribution credits:**
 
@@ -62,6 +65,7 @@ Some sound effects are adapted from the following clips.
  - water supply system 02 150428_0652.flac by klankbeeld -- https://freesound.org/s/329338/ 
  - Connect1 by RICHERlandTV -- https://freesound.org/s/351548/
  - Connect3 by RICHERlandTV -- https://freesound.org/s/351556/
+ - Low Voltage - Computer Voice Sample Sound by sketchy.dog -- https://freesound.org/s/642308/
 
 #### Sampling+
 
