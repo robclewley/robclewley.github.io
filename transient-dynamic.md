@@ -5,10 +5,10 @@ tags: [STEM, learning, gaming, educational, math, science, tech]
 comments: true
 ---
 
-My [Transient Dynamic](https://transient-dynamic.itch.io/) creative hobby outlet is the trifecta that combines:
+My [Transient Dynamic](https://transient-dynamic.itch.io/) creative hobby outlet is the trifecta that combines
 
  - My passion for training, mentoring, and professional development
- - My work in data science, software development, and user experience
+ - My work in data science, software development, and user experience design
  - My game development hobby
 
 <br>
@@ -20,7 +20,7 @@ My [Transient Dynamic](https://transient-dynamic.itch.io/) creative hobby outlet
 
 <center><img src="{{site.baseurl}}/assets/flyer-front.jpg" alt="OPERANDi" height="400" width="600"></center>
 
-The latest experiment is a sci-fi hacker simulation game called [OPERANDi](https://transient-dynamic.itch.io/operandi). It is a unique opportunity to learn real scientific skills in a narrative-driven video game. It involves a variety of intermediate and advanced STEM topics in a practical, realistic, and challenging setting, with a "hard sci-fi" backdrop. The API client can be [found here](https://github.com/robclewley/OPERANDi-client).
+This is a sci-fi hacker simulation game called [OPERANDi](https://transient-dynamic.itch.io/operandi). It is a unique opportunity to learn real scientific skills in a narrative-driven video game. It involves a variety of intermediate and advanced STEM topics in a practical, realistic, and challenging setting, with a "hard sci-fi" backdrop. The API client can be [found here](https://github.com/robclewley/OPERANDi-client).
 
 The demo is free to play on Windows or Mac.
 
